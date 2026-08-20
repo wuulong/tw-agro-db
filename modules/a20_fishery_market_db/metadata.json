@@ -1,7 +1,7 @@
 {
   "module_id": "a20_fishery_market_db",
   "name": "水產品資訊與漁獲名冊 (FisheryProductInfo)",
-  "version": "1.0.0",
+  "version": "0.7.0",
   "data_source": {
     "agency": "農業部漁業署 (Fisheries Agency)",
     "dataset_name": "水產品資訊與漁獲名冊 (FisheryProductInfo)",

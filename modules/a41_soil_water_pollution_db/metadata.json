@@ -1,7 +1,7 @@
 {
   "module_id": "a41_soil_water_pollution_db",
   "name": "全台農地土壤與水質監測資料庫",
-  "version": "1.0.0",
+  "version": "0.7.0",
   "data_source": {
     "agency": "環境保護署 / 農業部農糧署",
     "dataset_name": "全台農地土壤與水質監測資料庫",

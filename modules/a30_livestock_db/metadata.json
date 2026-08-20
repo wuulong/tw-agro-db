@@ -1,7 +1,7 @@
 {
   "module_id": "a30_livestock_db",
   "name": "毛豬批發市場交易行情 (LivestockPorkTrans)",
-  "version": "1.0.0",
+  "version": "0.7.0",
   "data_source": {
     "agency": "中央畜產會 (NAIF) / 農業部",
     "dataset_name": "毛豬批發市場交易行情 (LivestockPorkTrans)",

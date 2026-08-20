@@ -1,6 +1,6 @@
 # 🏷️ tw-agro-db (台灣農業開放大數據引擎) 版本演進與開發歷程看板 (VERSION.md)
 
-* **目前最新版本**：`v0.3.5`
+* **目前最新版本**：`v0.7.0`
 * **發布日期**：2026-08-20
 * **歸檔路徑**：[VERSION.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/VERSION.md)
 

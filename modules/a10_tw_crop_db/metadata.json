@@ -1,7 +1,7 @@
 {
   "module_id": "a10_tw_crop_db",
   "name": "農產品交易行情 (FarmTransData)",
-  "version": "1.0.0",
+  "version": "0.7.0",
   "data_source": {
     "agency": "農業部 (MOA)",
     "dataset_name": "農產品交易行情 (FarmTransData)",

@@ -134,7 +134,9 @@ flowchart LR
 
 ## 📚 專書圖鑑章節速查 (Book Chapters)
 
-全書 Markdown 章節位於 [`book/`](book/) 目錄中：
+> 📖 **全本打包下載**：**[FULL_BOOK_TAIWAN_AGRO_DB.md (一鍵閱讀全本 32 章大一統手冊)](book/FULL_BOOK_TAIWAN_AGRO_DB.md)**
+
+全書 Markdown 分章節檔案位於 [`book/`](book/) 目錄中：
 
 - **[第 0 章：全書目錄與導覽](book/00_toc.md)**
 - **[第 1 章：專案願景與農業數位轉型使命](book/01_vision_and_mission.md)**
@@ -143,7 +145,7 @@ flowchart LR
 - **[第 4 章：4 大領域利害關係人實戰劇本 Playbook](book/04_stakeholder_playbooks.md)** (含 CLI 串接指令與 Python API 指南)
 - **[第 5 章：系統工程驗證、單元測試網與 QGIS 軟體定義地圖](book/05_system_engineering_and_sdm.md)**
 - **[第 6 章：結語與專案總結](book/06_conclusion.md)**
-- **[附錄 A~C](book/07_01_appendix_sqlite_schema_glossary.md)** (含全庫 Schema 導覽、FAO 對合表與 CLI 手冊)
+- **[附錄 A~C](book/07_01_appendix_sqlite_schema_glossary.md)** (含全庫 Schema 導覽、FAO 對照整合表與 CLI 手冊)
 
 ---
 

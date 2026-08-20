@@ -1,7 +1,7 @@
 {
   "module_id": "aXX_module_name",
   "name": "新模組中文名稱說明",
-  "version": "1.0.0",
+  "version": "0.7.0",
   "data_source": {
     "agency": "政府開放資料提供機關",
     "dataset_name": "開放資料集名稱",
