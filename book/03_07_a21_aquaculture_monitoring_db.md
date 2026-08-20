@@ -1,9 +1,9 @@
 # 📘 3.7 A21 水產養殖水質與寒害監測知識庫 (03_07_a21_aquaculture_monitoring_db.md)
 
-* **專案名稱**：`tw-agro-db` (台灣農業開放大數據引擎)
+* **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
 * **當前版本**：`v0.7.0`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_07_a21_aquaculture_monitoring_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_07_a21_aquaculture_monitoring_db.md)
-* **實測對合**：[LOG_A21_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A21_TEST.log) (4/4 PASS)
+* **實測對照整合**：[LOG_A21_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A21_TEST.log) (4/4 PASS)
 
 ---
 
@@ -11,7 +11,7 @@
 
 冬季強烈大陸冷氣團襲台時，沿海養殖池水溫劇降，易引發大規模虱目魚、石斑魚寒害凍傷死亡；夏季悶熱亦容易導致池水溶氧驟降，造成大量窒息浮頭。養殖漁民缺乏即時的水質環境寒害與缺氧預警機制。
 
-`A21` (水產養殖水質與寒害監測 DB) 的核心使命，在於收錄全台養殖漁業重鎮的水質感測據點實時數據，建立 **水溫 $< 15^\circ\text{C}$ 寒害預警與溶氧 $< 3\text{mg/L}$ 缺氧監測 Scorer**，專門為養殖漁民與防災團隊提供實時水質避險預警。
+`A21` (水產養殖水質與寒害監測 DB) 的核心使命，在於收錄全台養殖漁業重鎮的水質感測據點實時資料，建立 **水溫 $< 15^\circ\text{C}$ 寒害預警與溶氧 $< 3\text{mg/L}$ 缺氧監測 Scorer**，專門為養殖漁民與防災團隊提供實時水質避險預警。
 
 ---
 
@@ -76,7 +76,7 @@ FROM a21_aquaculture_monitoring;
 
 ---
 
-## 4. 領域特化演算法與數據指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A21 特化了 **養殖水溫寒害與溶氧缺氧二元預警算式**：
 
@@ -86,7 +86,7 @@ $$\text{AnoxiaWarning} = \begin{cases} \text{ANOXIA\_WARNING}, & \text{if } diss
 
 ---
 
-## 5. 跨模組對接拓撲與數據流向 (Cross-Module Topology)
+## 5. 跨模組對接拓樸與資料流向 (Cross-Module Topology)
 
 ```mermaid
 flowchart LR
@@ -99,7 +99,7 @@ flowchart LR
     A40 -->|微氣候氣溫| A21
     A21 -->|寒害避險| A20
 ```
-*Fig 3.7: A21 跨模組對接拓撲與數據流向圖*
+*Fig 3.7: A21 跨模組對接拓樸與資料流向圖*
 
 ---
 
@@ -115,7 +115,7 @@ python src/cli/commands_a21.py search "七股區" --db db/agro.db
 
 ---
 
-## 7. 實測物理數據與驗證紀錄 (Empirical Metrics & PASS Proof)
+## 7. 實測物理資料與驗證紀錄 (Empirical Metrics & PASS Proof)
 
 * **物理入庫筆數**：**5 筆** 養殖水質據點紀錄
 * **單元測試報告**：[test_a21_aquaculture_monitoring_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a21_aquaculture_monitoring_db.py) (🟢 **4/4 PASS**)

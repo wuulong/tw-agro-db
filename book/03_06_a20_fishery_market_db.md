@@ -1,9 +1,9 @@
 # 📘 3.6 A20 水產產品與市場行情知識庫 (03_06_a20_fishery_market_db.md)
 
-* **專案名稱**：`tw-agro-db` (台灣農業開放大數據引擎)
+* **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
 * **當前版本**：`v0.7.0`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_06_a20_fishery_market_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_06_a20_fishery_market_db.md)
-* **實測對合**：[LOG_A20_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A20_TEST.log) (4/4 PASS)
+* **實測對照整合**：[LOG_A20_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A20_TEST.log) (4/4 PASS)
 
 ---
 
@@ -81,7 +81,7 @@ FROM a20_fishery_products;
 
 ---
 
-## 4. 領域特化演算法與數據指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A20 特化了 **管道符描述解析器 (Pipe Parser)** 與在地養殖標籤算式：
 
@@ -91,7 +91,7 @@ A20 特化了 **管道符描述解析器 (Pipe Parser)** 與在地養殖標籤�
 
 ---
 
-## 5. 跨模組對接拓撲與數據流向 (Cross-Module Topology)
+## 5. 跨模組對接拓樸與資料流向 (Cross-Module Topology)
 
 ```mermaid
 flowchart LR
@@ -102,9 +102,9 @@ flowchart LR
 
     A20 -->|注入| A00_VIEW
     A20 -->|養殖據點| A21 -->|水溫<15°C| A00_VIEW
-    A20 -->|語意對合| A50
+    A20 -->|語意對照整合| A50
 ```
-*Fig 3.6: A20 跨模組對接拓撲與數據流向圖*
+*Fig 3.6: A20 跨模組對接拓樸與資料流向圖*
 
 ---
 
@@ -120,7 +120,7 @@ python src/cli/commands_a20.py search "秋刀魚" --db db/agro.db
 
 ---
 
-## 7. 實測物理數據與驗證紀錄 (Empirical Metrics & PASS Proof)
+## 7. 實測物理資料與驗證紀錄 (Empirical Metrics & PASS Proof)
 
 * **物理入庫筆數**：**5 筆** 水產品名冊紀錄
 * **單元測試報告**：[test_a20_fishery_market_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a20_fishery_market_db.py) (🟢 **4/4 PASS**)

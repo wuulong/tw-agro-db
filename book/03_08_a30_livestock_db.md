@@ -1,17 +1,17 @@
 # 📘 3.8 A30 毛豬批發交易行情知識庫 (03_08_a30_livestock_db.md)
 
-* **專案名稱**：`tw-agro-db` (台灣農業開放大數據引擎)
+* **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
 * **當前版本**：`v0.7.0`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_08_a30_livestock_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_08_a30_livestock_db.md)
-* **實測對合**：[LOG_A30_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A30_TEST.log) (4/4 PASS)
+* **實測對照整合**：[LOG_A30_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A30_TEST.log) (4/4 PASS)
 
 ---
 
 ## 1. 領域寫作意圖與解決的農業問題 (Domain Purpose & Problem Solved)
 
-毛豬交易是台灣畜牧產業的核心命脈。全台 23 處毛豬批發拍賣市場每日交易量巨大，但原始資料庫過往多採用無槓民國年格式 (如 `1150819`)，缺乏跨市場與 ISO 8601 標準時間軸對合，使得養豬業者與肉品盤商無法精確分析拍賣價格與總頭數走勢。
+毛豬交易是台灣畜牧產業的核心命脈。全台 23 處毛豬批發拍賣市場每日交易量巨大，但原始資料庫過往多採用無槓民國年格式 (如 `1150819`)，缺乏跨市場與 ISO 8601 標準時間軸對照整合，使得養豬業者與肉品盤商無法精確分析拍賣價格與總頭數走勢。
 
-`A30` (毛豬批發交易行情 DB) 的核心使命，在於收錄中央畜產會發布的全台毛豬拍賣市場每日行情，建立 **無槓民國年轉碼算式 (`1150819 ➔ 2026-08-19`)**，專門為畜牧業者與肉品通路提供標準化交易數據。
+`A30` (毛豬批發交易行情 DB) 的核心使命，在於收錄中央畜產會發布的全台毛豬拍賣市場每日行情，建立 **無槓民國年轉碼算式 (`1150819 ➔ 2026-08-19`)**，專門為畜牧業者與肉品通路提供標準化交易資料。
 
 ---
 
@@ -74,7 +74,7 @@ FROM a30_pork_trans_daily;
 
 ---
 
-## 4. 領域特化演算法與數據指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A30 特化了 **無槓民國年 (ROC Date) 轉 ISO 8601 標準日期算式**：
 
@@ -85,7 +85,7 @@ $$\text{ISO\_Date} = \text{YYYY} \text{ + '-' + } ROC\_Date[3:5] \text{ + '-' + 
 
 ---
 
-## 5. 跨模組對接拓撲與數據流向 (Cross-Module Topology)
+## 5. 跨模組對接拓樸與資料流向 (Cross-Module Topology)
 
 ```mermaid
 flowchart LR
@@ -96,9 +96,9 @@ flowchart LR
 
     A30 -->|注入| A00_VIEW
     A30 -->|市場部位| MESH
-    A31 -->|禁藥對合| MESH
+    A31 -->|禁藥對照整合| MESH
 ```
-*Fig 3.8: A30 跨模組對接拓撲與數據流向圖*
+*Fig 3.8: A30 跨模組對接拓樸與資料流向圖*
 
 ---
 
@@ -114,7 +114,7 @@ python src/cli/commands_a30.py search "花蓮縣" --db db/agro.db
 
 ---
 
-## 7. 實測物理數據與驗證紀錄 (Empirical Metrics & PASS Proof)
+## 7. 實測物理資料與驗證紀錄 (Empirical Metrics & PASS Proof)
 
 * **物理入庫筆數**：**5 筆** 毛豬拍賣行情紀錄
 * **單元測試報告**：[test_a30_livestock_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a30_livestock_db.py) (🟢 **4/4 PASS**)

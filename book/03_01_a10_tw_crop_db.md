@@ -1,9 +1,9 @@
 # 📘 3.1 A10 台灣農糧批發交易行情知識庫 (03_01_a10_tw_crop_db.md)
 
-* **專案名稱**：`tw-agro-db` (台灣農業開放大數據引擎)
+* **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
 * **當前版本**：`v0.7.0`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_01_a10_tw_crop_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_01_a10_tw_crop_db.md)
-* **實測對合**：[LOG_A10_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A10_TEST.log) (4/4 PASS)
+* **實測對照整合**：[LOG_A10_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A10_TEST.log) (4/4 PASS)
 
 ---
 
@@ -80,7 +80,7 @@ FROM a10_crop_farm_trans;
 
 ---
 
-## 4. 領域特化演算法與數據指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A10 特化了 **農糧市場價格變異係數 (Coefficient of Variation, CV)** 離散算式：
 
@@ -94,7 +94,7 @@ $$CV = \frac{\sigma}{\mu}$$
 
 ---
 
-## 5. 跨模組對接拓撲與數據流向 (Cross-Module Topology)
+## 5. 跨模組對接拓樸與資料流向 (Cross-Module Topology)
 
 ```mermaid
 flowchart LR
@@ -108,9 +108,9 @@ flowchart LR
     A10 -->|注入| A00_VIEW
     A10 -->|作物碰撞| A11 -->|PHI等待期| MESH
     A10 -->|資材合規| A14
-    A10 -->|語意對合 c_1784| A50
+    A10 -->|語意對照整合 c_1784| A50
 ```
-*Fig 3.1: A10 跨模組對接拓撲與數據流向圖*
+*Fig 3.1: A10 跨模組對接拓樸與資料流向圖*
 
 ---
 
@@ -137,7 +137,7 @@ python src/cli/commands_a10.py search "椰子" --db db/agro.db
 
 ---
 
-## 7. 實測物理數據與驗證紀錄 (Empirical Metrics & PASS Proof)
+## 7. 實測物理資料與驗證紀錄 (Empirical Metrics & PASS Proof)
 
 * **物理入庫筆數**：**6,123 筆** 交易紀錄
 * **單元測試報告**：[test_a10_tw_crop_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a10_tw_crop_db.py) (🟢 **4/4 PASS**)

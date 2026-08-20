@@ -1,17 +1,17 @@
 # 📘 3.50 A50 FAO AGROVOC 國際農學詞庫知識庫 (03_50_a50_fao_agrovoc_db.md)
 
-* **專案名稱**：`tw-agro-db` (台灣農業開放大數據引擎)
+* **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
 * **當前版本**：`v0.7.0`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_50_a50_fao_agrovoc_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_50_a50_fao_agrovoc_db.md)
-* **實測對合**：[LOG_A50_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A50_TEST.log) (4/4 PASS)
+* **實測對照整合**：[LOG_A50_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A50_TEST.log) (4/4 PASS)
 
 ---
 
 ## 1. 領域寫作意圖與解決的農業問題 (Domain Purpose & Problem Solved)
 
-台灣在地農學名詞（如椰子、釋迦、毛豬部位）長期面臨跨國貿易、國際學術交流與跨語言 Agent 檢索時的「語意斷層」困境。各國對同一作物的稱呼不一，使得台灣農業數據難以直接融入全球開放資料 Linked Open Data (LOD) 網絡。
+台灣在地農學名詞（如椰子、釋迦、毛豬部位）長期面臨跨國貿易、國際學術交流與跨語言 Agent 檢索時的「語意斷層」困境。各國對同一作物的稱呼不一，使得台灣農業資料難以直接融入全球開放資料 Linked Open Data (LOD) 網路。
 
-`A50` (FAO AGROVOC 國際農學詞庫 DB) 的核心使命，在於完整收錄聯合國糧農組織 (FAO) 發布的國際農學本體詞彙，建立 SKOS 多語階層拓撲與概念模型，專門為台灣農業開放數據接軌國際 LOD 與 Agent 多語檢索提供硬核基石。
+`A50` (FAO AGROVOC 國際農學詞庫 DB) 的核心使命，在於完整收錄聯合國糧農組織 (FAO) 發布的國際農學本體詞彙，建立 SKOS 多語階層拓樸與概念模型，專門為台灣農業開放資料接軌國際 LOD 與 Agent 多語檢索提供硬核基石。
 
 ---
 
@@ -63,7 +63,7 @@ FROM a50_agrovoc_concepts;
       "description": "同義詞/同義別名列表",
       "example": ["Coconut tree", "Cocos nucifera"]
     },
-    "lod_alignment_score": { "type": "number", "description": "LOD 精確對合得分 (0.0~1.0)", "example": 1.0 }
+    "lod_alignment_score": { "type": "number", "description": "LOD 精確對照整合得分 (0.0~1.0)", "example": 1.0 }
   },
   "required": ["_v", "alt_labels_json", "lod_alignment_score"]
 }
@@ -83,15 +83,15 @@ FROM a50_agrovoc_concepts;
 
 ---
 
-## 4. 領域特化演算法與數據指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
 
-A50 特化了 **LOD SKOS 概念語意相似度對合模型**：
+A50 特化了 **LOD SKOS 概念語意相似度對照整合模型**：
 
 $$\text{AlignmentScore}(label_{tw}, label_{fao}) = \begin{cases} 1.0, & \text{if exact Match (中文/英文)} \\ 0.8, & \text{if Synonym / AltLabel Match} \\ 0.0, & \text{otherwise} \end{cases}$$
 
 ---
 
-## 5. 跨模組對接拓撲與數據流向 (Cross-Module Topology)
+## 5. 跨模組對接拓樸與資料流向 (Cross-Module Topology)
 
 ```mermaid
 flowchart LR
@@ -104,9 +104,9 @@ flowchart LR
 
     A50 -->|注入| A00_VIEW
     A10 & A20 & A30 -->|在地實體名詞| MESH
-    A50 -->|c_1784 概念對合| MESH
+    A50 -->|c_1784 概念對照整合| MESH
 ```
-*Fig 3.50: A50 跨模組對接拓撲與數據流向圖*
+*Fig 3.50: A50 跨模組對接拓樸與資料流向圖*
 
 ---
 
@@ -122,9 +122,9 @@ python src/cli/commands_a50.py search "coconut" --db db/agro.db
 
 ---
 
-## 7. 實測物理數據與驗證紀錄 (Empirical Metrics & PASS Proof)
+## 7. 實測物理資料與驗證紀錄 (Empirical Metrics & PASS Proof)
 
 * **物理入庫筆數**：**40,097 筆** 核心概念，**82,954 筆** 多語標籤
 * **單元測試報告**：[test_a50_fao_agrovoc_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a50_fao_agrovoc_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A50_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A50_TEST.log)
-* **母大腦鏈結斷言**：VAL-A00-018/019 實測 139 筆在地實體語意碰撞，精確將台灣在地「椰子」以 $Score = 1.0$ 對合至聯合國 FAO `c_1784`。
+* **母大腦鏈結斷言**：VAL-A00-018/019 實測 139 筆在地實體語意碰撞，精確將台灣在地「椰子」以 $Score = 1.0$ 對照整合至聯合國 FAO `c_1784`。

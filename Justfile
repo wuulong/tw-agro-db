@@ -22,3 +22,9 @@ agro-schema-gen:
 	@echo "🔄 自動編譯產出最新帶備註之 schema.sql..."
 	PYTHONPATH=. {{PYTHON}} scripts/generate_schema_sql.py --db db/agro.db --config src/config/schema_comments.json --out schema.sql
 
+# 5. 一鍵將全書獨立章節打包為 FULL_BOOK_TAIWAN_AGRO_DB.md 全本手冊
+agro-book-combine:
+	@echo "📚 一鍵打包全書獨立章節至 FULL_BOOK_TAIWAN_AGRO_DB.md..."
+	PYTHONPATH=. {{PYTHON}} ../../../scripts/blog/combine_tw_agro_db_book.py
+
+

@@ -1,22 +1,22 @@
 # 📘 第 4 章：4 大領域利害關係人實戰劇本 Playbook (04_stakeholder_playbooks.md)
 
-* **專案名稱**：`tw-agro-db` (台灣農業開放大數據引擎)
+* **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
 * **當前版本**：`v0.7.0`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/04_stakeholder_playbooks.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/04_stakeholder_playbooks.md)
-* **對合測試網**：[SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md)
+* **對照整合測試網**：[SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md)
 
 ---
 
 ## 🎯 4.0 第 4 章寫作意圖與標準 5 步結構說明
 
-本章將數據轉化為 **「直接解決實務問題的落地劇本 (Playbooks)」**。針對 **4 大核心利害關係人 (Key Stakeholders)**，分別提供一套標準的 **5 步實戰劇本**（著重於 CLI 命令行如何串接整件事），並於 `4.5` 節專章解構 Python API 開發指引：
+本章將資料轉化為 **「直接解決實務問題的落地劇本 (Playbooks)」**。針對 **4 大核心利害關係人 (Key Stakeholders)**，分別提供一套標準的 **5 步實戰劇本**（著重於 CLI 命令行如何串接整件事），並於 `4.5` 節專章解構 Python API 開發指引：
 
 ```mermaid
 flowchart LR
     Step1["1. 領域現實痛點<br/>(Pain Points)"]
-    Step2["2. 數據流轉路徑<br/>(Data Flow Path)"]
+    Step2["2. 資料流轉路徑<br/>(Data Flow Path)"]
     Step3["3. CLI 串接指令集<br/>(CLI Commands Chaining)"]
-    Step4["4. 數據結果與決策解讀<br/>(Decision Interpretation)"]
+    Step4["4. 資料結果與決策解讀<br/>(Decision Interpretation)"]
     Step5["5. 風險防護與最佳實踐<br/>(Risk Prevention)"]
 
     Step1 --> Step2 --> Step3 --> Step4 --> Step5
@@ -30,7 +30,7 @@ flowchart LR
 ### 1. 領域現實痛點
 第一線有機農民擬栽種「椰子」，面臨兩大抉擇：一是不知哪裡可以買到農業部審定合格之有機資材（防止誤用違規肥料導致有機驗證遭撤銷）；二是不知當前市場價格波動是否劇烈，擔心天災搶種導致收益崩盤。
 
-### 2. 數據流轉路徑
+### 2. 資料流轉路徑
 `A10 (農糧行情)` ➔ `A14 (有機肥料登記證)` ➔ `A13 (有機農場驗證名冊)` ➔ `A11 (農藥許可證 PHI)`
 
 ### 3. CLI 命令行串接指令集
@@ -47,7 +47,7 @@ python src/cli/commands_a14.py search "有機" --db db/agro.db
 tw-agro-cli search "椰子" --db db/agro.db
 ```
 
-### 4. 數據結果與決策解讀
+### 4. 資料結果與決策解讀
 * **行情解讀**：椰子均價 19.77 元/kg，離散 $CV = 0.0376$ ($CV < 0.1$)，屬於 `VERY_STABLE` 價格極度穩定之農效益作物。
 * **資材決策**：推薦選用「寶綠多精華有機肥 (肥製(質)字第0001001號)」，具備 `ORGANIC_COMPLIANT` 標籤，可安心用於有機驗證農場。
 
@@ -62,7 +62,7 @@ tw-agro-cli search "椰子" --db db/agro.db
 ### 1. 領域現實痛點
 團膳業者與食安稽查員在採購「批發市場肉品」與「學校午餐食材」時，極易因事後抽驗延遲（數月後才出報告），導致違規含有禁藥（如氯黴素）或農藥殘留超標的食材被學生與消費者吃下肚。
 
-### 2. 數據流轉路徑
+### 2. 資料流轉路徑
 `A30 (毛豬拍賣)` + `A31 (動物用藥)` ➔ `a00_livestock_pork_safety_mesh` ➔ `A12 (農檢 MRL 預警)`
 
 ### 3. CLI 命令行串接指令集
@@ -79,7 +79,7 @@ python src/cli/commands_a31.py search "氯黴素" --db db/agro.db
 tw-agro-cli doctor --db db/agro.db
 ```
 
-### 4. 數據結果與決策解讀
+### 4. 資料結果與決策解讀
 * **食安攔截結果**：0.01 秒內精確截獲「彰化縣市場極品去骨羊肉 ➔ 氯黴素 ($MRL = 0.0\text{ ppm}$))」，觸發最高等級 `PROHIBITED` 禁藥食安警告。
 * **採購決策**：立即暫停該批次肉品進貨，發動物理溯源封存。
 
@@ -94,7 +94,7 @@ tw-agro-cli doctor --db db/agro.db
 ### 1. 領域現實痛點
 開發農業諮詢 Chatbot 或 Agent 時，LLM 經常因缺乏結構化 Domain Grounding 而產生嚴重的「農業知識幻覺」（如胡亂建議農藥品項或錯估採收期）。
 
-### 2. 數據流轉路徑
+### 2. 資料流轉路徑
 `a00_graph_triples` (346 筆 SQLite-RDF) ➔ `fts_agro_global` (18,725 筆倒排) ➔ LLM Agent Tool-Calling
 
 ### 3. CLI 命令行串接指令集
@@ -108,7 +108,7 @@ tw-agro-cli build-all --db db/agro.db --force
 tw-agro-cli search "椰子" --json --db db/agro.db
 ```
 
-### 4. 數據結果與決策解讀
+### 4. 資料結果與決策解讀
 * **Agent 檢索結果**：
   - `(作物:椰子, has_pesticide, 農藥:滅)`
   - `(作物:椰子, agrovoc_concept, http://aims.fao.org/aos/agrovoc/c_1784)`
@@ -125,11 +125,11 @@ tw-agro-cli search "椰子" --json --db db/agro.db
 ### 1. 領域現實痛點
 農業經濟學家與氣候變遷研究員在評估「極端氣候與農地重金屬對區域農業的影響」時，過往因資料散落於氣象署、環境部與農糧署，難以進行跨域面板資料 (Panel Data) 回歸分析。
 
-### 2. 數據流轉路徑
+### 2. 資料流轉路徑
 `A41 (土壤水質重金屬)` ➔ `A40 (農業氣象)` ➔ `A50 (FAO AGROVOC LOD)` ➔ `A10 (農糧行情)`
 
 ### 3. CLI 命令行串接指令集
-研究員透過 CLI 匯出面板資料與國際 LOD 對合標籤：
+研究員透過 CLI 匯出面板資料與國際 LOD 對照整合標籤：
 
 ```bash
 # Step 1: 查詢「北投區」土壤重金屬監測據點與 PollutionRatio 污染比率
@@ -142,7 +142,7 @@ python src/cli/commands_a40.py search "100213" --db db/agro.db
 python src/cli/commands_a50.py search "coconuts" --db db/agro.db
 ```
 
-### 4. 數據結果與決策解讀
+### 4. 資料結果與決策解讀
 * **研究結果**：北投區重金屬鎘實測 5.0 ppm，污染比率 $PollutionRatio = 1.0$，屬於 `HIGH_RISK` 區域；結合 FAO `c_1784` 國際本體，建議將該區土地由食用作物轉型為非食用景觀或資材作物。
 
 ### 5. 風險防護與最佳實踐
@@ -180,7 +180,7 @@ triples = hub.get_graph_triples(entity_name="椰子")
 ```
 
 ### 3. JSON Schema 規範與 Data Transfer Object (DTO)
-所有 API 回傳數據均封裝為標準字典或 Pydantic DTO 模型，保證 `attributes_json` 的 Key-Value 結構可被反序列化。
+所有 API 回傳資料均封裝為標準字典或 Pydantic DTO 模型，保證 `attributes_json` 的 Key-Value 結構可被反序列化。
 
 ### 4. 異常處理 (Exception Handling) 規範
 核心 API 內**嚴禁 `sys.exit()`**，一律拋出標準 Python 異常：

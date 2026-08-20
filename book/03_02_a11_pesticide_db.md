@@ -1,9 +1,9 @@
 # 📘 3.2 A11 農藥許可證與安全採收期知識庫 (03_02_a11_pesticide_db.md)
 
-* **專案名稱**：`tw-agro-db` (台灣農業開放大數據引擎)
+* **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
 * **當前版本**：`v0.7.0`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_02_a11_pesticide_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_02_a11_pesticide_db.md)
-* **實測對合**：[LOG_A11_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A11_TEST.log) (4/4 PASS)
+* **實測對照整合**：[LOG_A11_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A11_TEST.log) (4/4 PASS)
 
 ---
 
@@ -83,17 +83,17 @@ FROM a11_pesticide_licenses;
 
 ---
 
-## 4. 領域特化演算法與數據指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A11 特化了 **安全採收等待期 (PHI) 風險分級算式**：
 
 $$\text{RiskLevel} = \begin{cases} \text{HIGH\_RISK}, & \text{if } PHI_{days} \ge 7 \\ \text{SAFE}, & \text{if } PHI_{days} < 7 \end{cases}$$
 
-* **Unicode 特殊字元對合**：內建 `unicode61` 分詞器，完美支援包含造字與特殊外字（如「滅」）之 FTS5 高速倒排。
+* **Unicode 特殊字元對照整合**：內建 `unicode61` 分詞器，完美支援包含造字與特殊外字（如「滅」）之 FTS5 高速倒排。
 
 ---
 
-## 5. 跨模組對接拓撲與數據流向 (Cross-Module Topology)
+## 5. 跨模組對接拓樸與資料流向 (Cross-Module Topology)
 
 ```mermaid
 flowchart LR
@@ -107,7 +107,7 @@ flowchart LR
     A10 -->|作物| A11 -->|藥證| MESH
     A12 -->|MRL 容許量| MESH
 ```
-*Fig 3.2: A11 跨模組對接拓撲與數據流向圖*
+*Fig 3.2: A11 跨模組對接拓樸與資料流向圖*
 
 ---
 
@@ -134,7 +134,7 @@ python src/cli/commands_a11.py search "滅" --db db/agro.db
 
 ---
 
-## 7. 實測物理數據與驗證紀錄 (Empirical Metrics & PASS Proof)
+## 7. 實測物理資料與驗證紀錄 (Empirical Metrics & PASS Proof)
 
 * **物理入庫筆數**：**9,993 筆** 許可證紀錄
 * **單元測試報告**：[test_a11_pesticide_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a11_pesticide_db.py) (🟢 **4/4 PASS**)

@@ -1,9 +1,9 @@
 # 📘 3.11 A41 土壤與水質環境安全知識庫 (03_11_a41_soil_water_pollution_db.md)
 
-* **專案名稱**：`tw-agro-db` (台灣農業開放大數據引擎)
+* **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
 * **當前版本**：`v0.7.0`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_11_a41_soil_water_pollution_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_11_a41_soil_water_pollution_db.md)
-* **實測對合**：[LOG_A41_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A41_TEST.log) (4/4 PASS)
+* **實測對照整合**：[LOG_A41_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A41_TEST.log) (4/4 PASS)
 
 ---
 
@@ -11,7 +11,7 @@
 
 農地重金屬污染（鎘、砷、銅、鉛等）直接關乎食用農作物品質與國土永續。過往土壤與灌溉水質監測資料隸屬於環境部行政範疇，缺乏與農業部農糧作物栽培字典 (A10) 的事前交叉比對機制，使得購地農民或農業推廣團隊無法即時預警污染區域。
 
-`A41` (土壤與水質環境安全 DB) 的核心使命，在於收錄全台農地土壤與灌溉水質監測數據，建立 **重金屬污染比率 ($PollutionRatio = \frac{conc}{limit}$) 風險評等模型**，專門為國土規劃與食安預防提供環境安全指引。
+`A41` (土壤與水質環境安全 DB) 的核心使命，在於收錄全台農地土壤與灌溉水質監測資料，建立 **重金屬污染比率 ($PollutionRatio = \frac{conc}{limit}$) 風險評等模型**，專門為國土規劃與食安預防提供環境安全指引。
 
 ---
 
@@ -76,9 +76,9 @@ FROM a41_soil_water_pollution;
 
 ---
 
-## 4. 領域特化演算法與數據指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
 
-A41 特化了 **重金屬污染比率 ($PollutionRatio$) 演算法**：
+A41 特化了 **重金屬污染比率 ($PollutionRatio$) 演演演算法**：
 
 $$PollutionRatio = \frac{\text{實測濃度 (concentration\_ppm)}}{\text{管制標準 (regulatory\_limit\_ppm)}}$$
 
@@ -86,7 +86,7 @@ $$\text{RiskLevel} = \begin{cases} \text{HIGH\_RISK}, & \text{if } PollutionRati
 
 ---
 
-## 5. 跨模組對接拓撲與數據流向 (Cross-Module Topology)
+## 5. 跨模組對接拓樸與資料流向 (Cross-Module Topology)
 
 ```mermaid
 flowchart LR
@@ -99,7 +99,7 @@ flowchart LR
     A41 -->|重金屬風險| MESH
     A10 -->|避開食用作物| MESH
 ```
-*Fig 3.11: A41 跨模組對接拓撲與數據流向圖*
+*Fig 3.11: A41 跨模組對接拓樸與資料流向圖*
 
 ---
 
@@ -115,7 +115,7 @@ python src/cli/commands_a41.py search "北投區" --db db/agro.db
 
 ---
 
-## 7. 實測物理數據與驗證紀錄 (Empirical Metrics & PASS Proof)
+## 7. 實測物理資料與驗證紀錄 (Empirical Metrics & PASS Proof)
 
 * **物理入庫筆數**：**5 筆** 土壤監測據點紀錄
 * **單元測試報告**：[test_a41_soil_water_pollution_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a41_soil_water_pollution_db.py) (🟢 **4/4 PASS**)

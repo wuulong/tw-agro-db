@@ -1,6 +1,6 @@
-# 📘 《台灣農漁畜開放數據全景圖鑑：從產地行情到食安防禦的資料體系》全書目錄 (00_toc.md)
+# 📘 《台灣農漁畜開放資料全景圖鑑：從產地行情到食安防禦的資料體系》全書目錄 (00_toc.md)
 
-* **專案名稱**：`tw-agro-db` (台灣農業開放大數據引擎)
+* **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
 * **當前版本**：`v0.7.0`
 * **歸檔目錄**：[events-2026Q3/agro-db-in/tw-agro-db/book/00_toc.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/00_toc.md)
 
@@ -45,7 +45,7 @@
   - 4.4 農業經濟與環境研究員：跨域 LOD 與重金屬生態 Playbook
   - 4.5 Python API 程式開發與架構設計指南 (API Development Guide)
 * **[第 5 章：系統工程驗證、單元測試網與 QGIS 軟體定義地圖](05_system_engineering_and_sdm.md)**
-  - 5.1 系統工程 100% 對合度與 Buildlogs 審計機制 (`Fig 5.1`)
+  - 5.1 系統工程 100% 對照整合度與 Buildlogs 審計機制 (`Fig 5.1`)
   - 5.2 63/63 PASS 全網綠燈驗證矩陣
   - 5.3 軟體定義地圖 (SDM) 與 QGIS 空間可視化整合 (`Fig 5.2`)
   - 5.4 專案自動化維運、Just Command 與全庫重構管線
@@ -54,5 +54,5 @@
   - 6.2 賦能智慧農業與食安防護的長遠價值
 * **附錄 (Appendix)**
   - [附錄 A：agro.db 大一統全庫 Schema 與 DDL 地圖](07_01_appendix_sqlite_schema_glossary.md)
-  - [附錄 B：台灣在地實體與聯合國 FAO AGROVOC 對合總表](07_02_appendix_fao_agrovoc_mapping.md)
+  - [附錄 B：台灣在地實體與聯合國 FAO AGROVOC 對照整合總表](07_02_appendix_fao_agrovoc_mapping.md)
   - [附錄 C：tw-agro-cli 與各模組 CLI 參數指令速查手冊](07_03_appendix_cli_reference.md)

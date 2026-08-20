@@ -1,9 +1,9 @@
 # 📘 3.10 A40 農業氣象站歷史觀測知識庫 (03_10_a40_agro_climate_db.md)
 
-* **專案名稱**：`tw-agro-db` (台灣農業開放大數據引擎)
+* **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
 * **當前版本**：`v0.7.0`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_10_a40_agro_climate_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_10_a40_agro_climate_db.md)
-* **實測對合**：[LOG_A40_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A40_TEST.log) (4/4 PASS)
+* **實測對照整合**：[LOG_A40_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A40_TEST.log) (4/4 PASS)
 
 ---
 
@@ -11,7 +11,7 @@
 
 氣候變遷直接影響農糧產量與水產寒害。氣象資料過往散落於 Central Weather Administration 各種氣候月報中，缺乏與農糧市場價格 (A10) 及水產水質 (A21) 的即時間距關聯。
 
-`A40` (農業氣象站歷史觀測 DB) 的核心使命，在於收錄全台灣氣象站及農業氣象觀測點的每日/每小時觀測歷史（氣溫、降雨、水氣壓、日照），專門為農經專家與氣候變遷研究員提供作物生長微氣候分析數據。
+`A40` (農業氣象站歷史觀測 DB) 的核心使命，在於收錄全台灣氣象站及農業氣象觀測點的每日/每小時觀測歷史（氣溫、降雨、水氣壓、日照），專門為農經專家與氣候變遷研究員提供作物生長微氣候分析資料。
 
 ---
 
@@ -72,7 +72,7 @@ FROM a40_agro_climate_stations;
 
 ---
 
-## 4. 領域特化演算法與數據指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A40 特化了 **微氣候長週期溫濕度序列模型**：
 
@@ -80,7 +80,7 @@ $$\text{DailyMeanTemp} = \frac{1}{N} \sum_{i=1}^{N} Temp_i$$
 
 ---
 
-## 5. 跨模組對接拓撲與數據流向 (Cross-Module Topology)
+## 5. 跨模組對接拓樸與資料流向 (Cross-Module Topology)
 
 ```mermaid
 flowchart LR
@@ -93,7 +93,7 @@ flowchart LR
     A40 -->|氣溫序列| A21
     A40 -->|氣候波動| A10
 ```
-*Fig 3.10: A40 跨模組對接拓撲與數據流向圖*
+*Fig 3.10: A40 跨模組對接拓樸與資料流向圖*
 
 ---
 
@@ -109,9 +109,9 @@ python src/cli/commands_a40.py search "100213" --db db/agro.db
 
 ---
 
-## 7. 實測物理數據與驗證紀錄 (Empirical Metrics & PASS Proof)
+## 7. 實測物理資料與驗證紀錄 (Empirical Metrics & PASS Proof)
 
 * **物理入庫筆數**：**2,527 點** 觀測歷史紀錄
 * **單元測試報告**：[test_a40_agro_climate_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a40_agro_climate_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A40_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A40_TEST.log)
-* **母大腦鏈結斷言**：VAL-A00-014/015 實測測站 100213 觀測點數 96 點與跨 Pillar 氣候對合。
+* **母大腦鏈結斷言**：VAL-A00-014/015 實測測站 100213 觀測點數 96 點與跨 Pillar 氣候對照整合。

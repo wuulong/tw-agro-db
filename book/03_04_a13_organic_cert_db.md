@@ -1,9 +1,9 @@
 # 📘 3.4 A13 有機友善農場認證名冊知識庫 (03_04_a13_organic_cert_db.md)
 
-* **專案名稱**：`tw-agro-db` (台灣農業開放大數據引擎)
+* **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
 * **當前版本**：`v0.7.0`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_04_a13_organic_cert_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_04_a13_organic_cert_db.md)
-* **實測對合**：[LOG_A13_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A13_TEST.log) (4/4 PASS)
+* **實測對照整合**：[LOG_A13_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A13_TEST.log) (4/4 PASS)
 
 ---
 
@@ -11,7 +11,7 @@
 
 有機農業推動需要極度透明的驗證名冊與資材申報機制。消費者與採購商常因無法驗證農場是否具備合法有機認證，或缺乏有機資材使用紀錄，而對有機標章產生疑慮。
 
-`A13` (有機友善農場認證名冊 DB) 的核心使命，在於收錄全台灣審定合格之有機與友善環境栽培農場清冊、驗證機構與土壤改質資材申報數據，專門為有機驗證團隊與通路採購提供權威驗證數據。
+`A13` (有機友善農場認證名冊 DB) 的核心使命，在於收錄全台灣審定合格之有機與友善環境栽培農場清冊、驗證機構與土壤改質資材申報資料，專門為有機驗證團隊與通路採購提供權威驗證資料。
 
 ---
 
@@ -78,15 +78,15 @@ FROM a13_organic_farm_list;
 
 ---
 
-## 4. 領域特化演算法與數據指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
 
-A14 肥料與資材與 A13 的合規比對演算法：
+A14 肥料與資材與 A13 的合規比對演演演算法：
 
 $$\text{OrganicValidity} = \begin{cases} \text{VALID}, & \text{if CertNumber is Active and Body approved} \\ \text{INVALID}, & \text{otherwise} \end{cases}$$
 
 ---
 
-## 5. 跨模組對接拓撲與數據流向 (Cross-Module Topology)
+## 5. 跨模組對接拓樸與資料流向 (Cross-Module Topology)
 
 ```mermaid
 flowchart LR
@@ -101,7 +101,7 @@ flowchart LR
     A13 -->|農場| MESH
     A14 -->|資材| MESH
 ```
-*Fig 3.4: A13 跨模組對接拓撲與數據流向圖*
+*Fig 3.4: A13 跨模組對接拓樸與資料流向圖*
 
 ---
 
@@ -117,7 +117,7 @@ python src/cli/commands_a13.py search "硫酸銨" --db db/agro.db
 
 ---
 
-## 7. 實測物理數據與驗證紀錄 (Empirical Metrics & PASS Proof)
+## 7. 實測物理資料與驗證紀錄 (Empirical Metrics & PASS Proof)
 
 * **物理入庫筆數**：**10 筆** 有機資材申報紀錄
 * **單元測試報告**：[test_a13_organic_cert_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a13_organic_cert_db.py) (🟢 **4/4 PASS**)

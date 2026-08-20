@@ -1,15 +1,15 @@
 # 📘 3.3 A12 農檢 MRL 殘留抽驗預警知識庫 (03_03_a12_pest_mrl_alert_db.md)
 
-* **專案名稱**：`tw-agro-db` (台灣農業開放大數據引擎)
+* **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
 * **當前版本**：`v0.7.0`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_03_a12_pest_mrl_alert_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_03_a12_pest_mrl_alert_db.md)
-* **實測對合**：[LOG_A12_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A12_TEST.log) (4/4 PASS)
+* **實測對照整合**：[LOG_A12_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A12_TEST.log) (4/4 PASS)
 
 ---
 
 ## 1. 領域寫作意圖與解決的農業問題 (Domain Purpose & Problem Solved)
 
-農藥殘留抽驗數據是食安防線的關鍵指標。過往檢驗結果多在抽驗後數月才公告，且缺乏與農藥許可證 (A11) 及作物 (A10) 的即時比對機制，使得食安團隊與團膳業者無法進行事前預警。
+農藥殘留抽驗資料是食安防線的關鍵指標。過往檢驗結果多在抽驗後數月才公告，且缺乏與農藥許可證 (A11) 及作物 (A10) 的即時比對機制，使得食安團隊與團膳業者無法進行事前預警。
 
 `A12` (農檢 MRL 殘留抽驗預警 DB) 的核心使命，在於收錄衛福部與農業部發布的農藥殘留容許量 (Maximum Residue Limits, MRL) 與抽驗結果，專門為食安團隊提供超標預警 (`OVER_LIMIT`) 與風險評等。
 
@@ -74,7 +74,7 @@ FROM a12_pest_mrl_alert;
 
 ---
 
-## 4. 領域特化演算法與數據指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A12 特化了 **農藥殘留超標比率 ($MRLRatio$) 演算模型**：
 
@@ -87,7 +87,7 @@ $$MRLRatio = \frac{\text{實測殘留濃度 (detected\_ppm)}}{\text{官方容許
 
 ---
 
-## 5. 跨模組對接拓撲與數據流向 (Cross-Module Topology)
+## 5. 跨模組對接拓樸與資料流向 (Cross-Module Topology)
 
 ```mermaid
 flowchart LR
@@ -102,7 +102,7 @@ flowchart LR
     A11 -->|藥證| MESH
     A12 -->|MRL門檻| MESH
 ```
-*Fig 3.3: A12 跨模組對接拓撲與數據流向圖*
+*Fig 3.3: A12 跨模組對接拓樸與資料流向圖*
 
 ---
 
@@ -129,7 +129,7 @@ python src/cli/commands_a12.py search "甘藍" --db db/agro.db
 
 ---
 
-## 7. 實測物理數據與驗證紀錄 (Empirical Metrics & PASS Proof)
+## 7. 實測物理資料與驗證紀錄 (Empirical Metrics & PASS Proof)
 
 * **物理入庫筆數**：**5 筆** 預警採樣紀錄
 * **單元測試報告**：[test_a12_pest_mrl_alert_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a12_pest_mrl_alert_db.py) (🟢 **4/4 PASS**)
