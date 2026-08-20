@@ -1,0 +1,25 @@
+{
+  "module_id": "a14_organic_fertilizer_db",
+  "name": "全台農糧資材與肥料登記證資料庫",
+  "version": "1.0.0",
+  "data_source": {
+    "agency": "農業部農糧署",
+    "dataset_name": "全台農糧資材與肥料登記證資料庫",
+    "source_url": "https://data.gov.tw/dataset/A14_FERTILIZER",
+    "download_method": "opendata_cli / curl",
+    "local_sample_path": "/Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/agro_poc_samples/A14_organic_fertilizer.json",
+    "sha256_hash": "",
+    "last_updated": "2026-08-20T12:27:14.163855+08:00"
+  },
+  "tables": [
+    "a14_fertilizer_licenses",
+    "a14_fertilizer_fts"
+  ],
+  "views": [
+    "v_a14_fertilizer"
+  ],
+  "record_counts": {
+    "a14_fertilizer_licenses": 5
+  },
+  "status": "ACTIVE"
+}

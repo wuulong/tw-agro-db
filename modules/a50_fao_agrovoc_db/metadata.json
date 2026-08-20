@@ -1,0 +1,27 @@
+{
+  "module_id": "a50_fao_agrovoc_db",
+  "name": "國際農學多語主題詞庫 (AGROVOC LOD)",
+  "version": "1.0.0",
+  "data_source": {
+    "agency": "聯合國糧農組織 (FAO)",
+    "dataset_name": "國際農學多語主題詞庫 (AGROVOC LOD)",
+    "source_url": "https://agrovoc.fao.org/sparql",
+    "download_method": "opendata_cli / curl",
+    "local_sample_path": "/Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/agro_poc_samples/A50_fao_agrovoc.json",
+    "sha256_hash": "5d5a574ca4461a974d3083985b5e26643a3b6c20c7a4f26439cc7c7476e86ec3",
+    "last_updated": "2026-08-20T12:27:14.976126+08:00"
+  },
+  "tables": [
+    "a50_agrovoc_concepts",
+    "a50_agrovoc_labels",
+    "a50_agrovoc_hierarchy",
+    "a50_agrovoc_fts"
+  ],
+  "views": [
+    "v_a50_agrovoc_semantic"
+  ],
+  "record_counts": {
+    "a50_agrovoc_concepts": 40097
+  },
+  "status": "ACTIVE"
+}

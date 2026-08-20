@@ -1,0 +1,25 @@
+{
+  "module_id": "a41_soil_water_pollution_db",
+  "name": "全台農地土壤與水質監測資料庫",
+  "version": "1.0.0",
+  "data_source": {
+    "agency": "環境保護署 / 農業部農糧署",
+    "dataset_name": "全台農地土壤與水質監測資料庫",
+    "source_url": "https://data.gov.tw/dataset/A41_SOIL_WATER",
+    "download_method": "opendata_cli / curl",
+    "local_sample_path": "/Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/agro_poc_samples/A41_soil_water_pollution.json",
+    "sha256_hash": "250887a08a3854cf364871279e9aab5b63317e85c53e989b5019ca1b9450caca",
+    "last_updated": "2026-08-20T12:27:14.216259+08:00"
+  },
+  "tables": [
+    "a41_soil_water_monitoring",
+    "a41_soil_water_fts"
+  ],
+  "views": [
+    "v_a41_soil_water"
+  ],
+  "record_counts": {
+    "a41_soil_water_monitoring": 5
+  },
+  "status": "ACTIVE"
+}

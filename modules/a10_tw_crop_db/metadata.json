@@ -1,0 +1,26 @@
+{
+  "module_id": "a10_tw_crop_db",
+  "name": "農產品交易行情 (FarmTransData)",
+  "version": "1.0.0",
+  "data_source": {
+    "agency": "農業部 (MOA)",
+    "dataset_name": "農產品交易行情 (FarmTransData)",
+    "source_url": "https://data.moa.gov.tw/Service/OpenData/FromM/FarmTransData.aspx?IsTransData=1",
+    "download_method": "opendata_cli / curl",
+    "local_sample_path": "/Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/agro_poc_samples/A10_crop_farm_trans.json",
+    "sha256_hash": "95e07b228cde0297f70d989d64a65180311336000328ff78f64cf7ffe7c1df10",
+    "last_updated": "2026-08-20T12:27:13.985478+08:00"
+  },
+  "tables": [
+    "a10_crop_dictionary",
+    "a10_crop_trans_daily",
+    "a10_crop_fts"
+  ],
+  "views": [
+    "v_a10_crop_market_summary"
+  ],
+  "record_counts": {
+    "a10_crop_trans_daily": 6169
+  },
+  "status": "ACTIVE"
+}

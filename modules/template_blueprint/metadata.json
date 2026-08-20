@@ -1,0 +1,25 @@
+{
+  "module_id": "aXX_module_name",
+  "name": "新模組中文名稱說明",
+  "version": "1.0.0",
+  "data_source": {
+    "agency": "政府開放資料提供機關",
+    "dataset_name": "開放資料集名稱",
+    "source_url": "https://data.gov.tw/...",
+    "download_method": "opendata_cli / curl",
+    "acquisition_command": "curl -s 'URL' -o agro_poc_samples/AXX_sample.json",
+    "local_sample_path": "agro_poc_samples/AXX_sample.json",
+    "last_updated": "2026-08-20T00:00:00+08:00"
+  },
+  "tables": [
+    "aXX_entity_table",
+    "aXX_entity_fts"
+  ],
+  "views": [
+    "v_master_aXX_name"
+  ],
+  "record_counts": {
+    "aXX_entity_table": 0
+  },
+  "status": "DRAFT"
+}

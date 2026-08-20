@@ -1,0 +1,27 @@
+{
+  "module_id": "a00_master_hub",
+  "name": "tw-agro-db 母大腦與全域索引中心",
+  "version": "1.0.0",
+  "data_source": {
+    "agency": "農業部 (MOA) / tw-agro-db Master Orchestrator",
+    "dataset_name": "全域倒排與母大腦延伸分析指標",
+    "source_url": "Master Hub Internal Synthesis",
+    "download_method": "A00 Internal Builder",
+    "acquisition_command": "python src/cli/main.py build-all",
+    "local_sample_path": "db/agro.db",
+    "last_updated": "2026-08-20T07:35:00+08:00"
+  },
+  "tables": [
+    "fts_agro_global",
+    "a00_master_cross_market_index"
+  ],
+  "views": [
+    "v_master_crop_market"
+  ],
+  "description": "全專案母大腦全域倒排、解耦視圖織連與跨市場價格離散指標庫",
+  "record_counts": {
+    "fts_agro_global": 6123,
+    "a00_master_cross_market_index": 2133
+  },
+  "status": "ACTIVE"
+}

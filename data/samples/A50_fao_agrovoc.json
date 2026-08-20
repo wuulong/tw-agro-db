@@ -1,0 +1,100 @@
+[
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_1784",
+    "concept_id": "c_1784",
+    "prefLabel_en": "coconut",
+    "prefLabel_zh_tw": "椰子",
+    "prefLabel_zh_cn": "椰子",
+    "altLabels": [
+      "Cocos nucifera",
+      "椰子樹",
+      "熱帶水果"
+    ],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_3085",
+    "category": "CROP"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_3085",
+    "concept_id": "c_3085",
+    "prefLabel_en": "tropical fruits",
+    "prefLabel_zh_tw": "熱帶水果",
+    "prefLabel_zh_cn": "热带水果",
+    "altLabels": [
+      "Tropical Fruit",
+      "熱帶農作物"
+    ],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_3136",
+    "category": "CROP"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_14371",
+    "concept_id": "c_14371",
+    "prefLabel_en": "imidacloprid",
+    "prefLabel_zh_tw": "益達胺",
+    "prefLabel_zh_cn": "吡虫啉",
+    "altLabels": [
+      "Imidaclopride",
+      "滅",
+      "農藥主成分"
+    ],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_5740",
+    "category": "PEST_CONTROL"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_5740",
+    "concept_id": "c_5740",
+    "prefLabel_en": "insecticides",
+    "prefLabel_zh_tw": "殺蟲劑",
+    "prefLabel_zh_cn": "杀虫剂",
+    "altLabels": [
+      "Insecticide",
+      "農藥化學品"
+    ],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_5739",
+    "category": "PEST_CONTROL"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_7646",
+    "concept_id": "c_7646",
+    "prefLabel_en": "swine",
+    "prefLabel_zh_tw": "毛豬",
+    "prefLabel_zh_cn": "猪",
+    "altLabels": [
+      "Pig",
+      "Pork",
+      "家畜",
+      "豬隻"
+    ],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_448",
+    "category": "ANIMAL"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_2840",
+    "concept_id": "c_2840",
+    "prefLabel_en": "fishes",
+    "prefLabel_zh_tw": "水產魚類",
+    "prefLabel_zh_cn": "鱼类",
+    "altLabels": [
+      "Fish",
+      "Aquaculture",
+      "秋刀魚",
+      "透抽"
+    ],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_505",
+    "category": "ANIMAL"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_6436",
+    "concept_id": "c_6436",
+    "prefLabel_en": "rain",
+    "prefLabel_zh_tw": "降雨量",
+    "prefLabel_zh_cn": "降雨",
+    "altLabels": [
+      "Precipitation",
+      "豪雨觀測",
+      "雨量站"
+    ],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_4825",
+    "category": "CLIMATE"
+  }
+]

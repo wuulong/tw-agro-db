@@ -1,0 +1,25 @@
+{
+  "module_id": "a21_aquaculture_monitoring_db",
+  "name": "全台水產養殖場水質與寒害監測資料庫",
+  "version": "1.0.0",
+  "data_source": {
+    "agency": "農業部漁業署",
+    "dataset_name": "全台水產養殖場水質與寒害監測資料庫",
+    "source_url": "https://data.gov.tw/dataset/A21_AQUACULTURE",
+    "download_method": "opendata_cli / curl",
+    "local_sample_path": "/Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/agro_poc_samples/A21_aquaculture_monitoring.json",
+    "sha256_hash": "23140f1c822c0a018eb71282fe82037790290a6f3c416a118b56cbd2cb212982",
+    "last_updated": "2026-08-20T12:27:14.177728+08:00"
+  },
+  "tables": [
+    "a21_aquaculture_monitoring",
+    "a21_aquaculture_fts"
+  ],
+  "views": [
+    "v_a21_aquaculture"
+  ],
+  "record_counts": {
+    "a21_aquaculture_monitoring": 13
+  },
+  "status": "ACTIVE"
+}

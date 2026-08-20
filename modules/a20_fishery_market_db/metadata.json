@@ -1,0 +1,25 @@
+{
+  "module_id": "a20_fishery_market_db",
+  "name": "水產品資訊與漁獲名冊 (FisheryProductInfo)",
+  "version": "1.0.0",
+  "data_source": {
+    "agency": "農業部漁業署 (Fisheries Agency)",
+    "dataset_name": "水產品資訊與漁獲名冊 (FisheryProductInfo)",
+    "source_url": "https://data.gov.tw/dataset/138541",
+    "download_method": "opendata_cli / curl",
+    "local_sample_path": "/Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/agro_poc_samples/A20_fishery_product_info.json",
+    "sha256_hash": "f5080aa899781d57cf622b63ec1cca92c2323b14018f071e1d7792b6fa799685",
+    "last_updated": "2026-08-20T12:27:14.172028+08:00"
+  },
+  "tables": [
+    "a20_fishery_products",
+    "a20_fishery_fts"
+  ],
+  "views": [
+    "v_a20_fishery_product"
+  ],
+  "record_counts": {
+    "a20_fishery_products": 5
+  },
+  "status": "ACTIVE"
+}

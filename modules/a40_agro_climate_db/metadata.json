@@ -1,0 +1,25 @@
+{
+  "module_id": "a40_agro_climate_db",
+  "name": "農業氣象站每日觀測數據 (AgroClimateStations)",
+  "version": "1.0.0",
+  "data_source": {
+    "agency": "農業部試驗所 (TFRI) / 氣象署",
+    "dataset_name": "農業氣象站每日觀測數據 (AgroClimateStations)",
+    "source_url": "https://iesn.tfri.gov.tw/opd/api/",
+    "download_method": "opendata_cli / curl",
+    "local_sample_path": "/Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/agro_poc_samples/A40_agro_climate_stations.json",
+    "sha256_hash": "0e01cd4ef1f1ceb00a9a95f9e7d9ee389ad5d782a4b82604673a17066c5f8828",
+    "last_updated": "2026-08-20T12:27:14.208062+08:00"
+  },
+  "tables": [
+    "a40_climate_daily_obs",
+    "a40_climate_fts"
+  ],
+  "views": [
+    "v_a40_agro_climate"
+  ],
+  "record_counts": {
+    "a40_climate_daily_obs": 2527
+  },
+  "status": "ACTIVE"
+}

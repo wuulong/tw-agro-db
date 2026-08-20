@@ -1,0 +1,29 @@
+{
+  "project_name": "tw-agro-db",
+  "version": "0.2.0",
+  "description": "台灣農業開放大數據引擎 (Master Hub)",
+  "active_modules": [
+    "a10_tw_crop_db",
+    "a11_pesticide_db",
+    "a12_pest_mrl_alert_db",
+    "a13_organic_cert_db",
+    "a30_livestock_db"
+  ],
+  "data_source": {
+    "project": "tw-agro-db Master Hub",
+    "managed_by": "A00 Orchestrator",
+    "harvested_pillars": [
+      "Pillar 1: 農糧與病蟲害防檢",
+      "Pillar 2: 水產漁業與產銷網",
+      "Pillar 3: 畜牧獸醫與飼料監測",
+      "Pillar 4: 農業氣象與土壤水文"
+    ]
+  },
+  "master_tables": [
+    "fts_agro_global",
+    "a00_master_cross_market_index"
+  ],
+  "master_views": [
+    "v_master_crop_market"
+  ]
+}

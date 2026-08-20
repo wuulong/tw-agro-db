@@ -1,0 +1,25 @@
+{
+  "module_id": "a13_organic_cert_db",
+  "name": "有機農場與品牌審查資材 (OrganicFarmList)",
+  "version": "1.0.0",
+  "data_source": {
+    "agency": "農業部 (MOA)",
+    "dataset_name": "有機農場與品牌審查資材 (OrganicFarmList)",
+    "source_url": "https://data.moa.gov.tw/Service/OpenData/FromM/OrganicFarmList.aspx",
+    "download_method": "opendata_cli / curl",
+    "local_sample_path": "/Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/agro_poc_samples/A13_organic_farm_list.json",
+    "sha256_hash": "96a88368738d7b42d3a5cc297dbe1b19da5ca2d2bf06c4eefc4b07ed90adc828",
+    "last_updated": "2026-08-20T12:27:14.159348+08:00"
+  },
+  "tables": [
+    "a13_organic_materials_registry",
+    "a13_organic_fts"
+  ],
+  "views": [
+    "v_a13_organic_cert"
+  ],
+  "record_counts": {
+    "a13_organic_materials_registry": 5
+  },
+  "status": "ACTIVE"
+}

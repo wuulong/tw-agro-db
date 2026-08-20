@@ -1,0 +1,26 @@
+{
+  "module_id": "a11_pesticide_db",
+  "name": "農藥許可證資料庫 (PesticideLic)",
+  "version": "1.0.0",
+  "data_source": {
+    "agency": "農業部防檢署 (BAPHIQ)",
+    "dataset_name": "農藥許可證資料庫 (PesticideLic)",
+    "source_url": "https://data.moa.gov.tw/Service/OpenData/FromM/PesticideLic.aspx",
+    "download_method": "opendata_cli / curl",
+    "local_sample_path": "/Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/agro_poc_samples/A11_pesticide_licenses.json",
+    "sha256_hash": "98a2eca0389f0dfe591208bd24f7c75aace1a0484f3c4b70f50a705ddd39a7a4",
+    "last_updated": "2026-08-20T12:27:14.134883+08:00"
+  },
+  "tables": [
+    "a11_pesticide_licenses",
+    "a11_prohibited_pesticides",
+    "a11_pesticide_fts"
+  ],
+  "views": [
+    "v_a11_pesticide_safety"
+  ],
+  "record_counts": {
+    "a11_pesticide_licenses": 9993
+  },
+  "status": "ACTIVE"
+}

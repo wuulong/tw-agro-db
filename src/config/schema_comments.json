@@ -1,0 +1,175 @@
+{
+  "_v": "1.0.0",
+  "tables": {
+    "a10_crop_farm_trans": {
+      "table_comment": "A10 農糧批發交易行情主表",
+      "columns": {
+        "trans_id": "交易紀錄唯一主鍵 (自增)",
+        "trans_date": "交易日期 (ISO 8601: YYYY-MM-DD)",
+        "crop_code": "作物代號 (如 C01)",
+        "crop_name": "作物名稱 (如 椰子)",
+        "market_name": "批發市場名稱 (如 台北一)",
+        "avg_price_ntd": "平均成交價 (新台幣元/公斤)",
+        "trans_quantity_kg": "成交總重量 (公斤)",
+        "attributes_json": "JSON 擴充欄位 (含 CV 價格變異係數)",
+        "created_at": "紀錄建立時間戳記"
+      }
+    },
+    "a11_pesticide_licenses": {
+      "table_comment": "A11 農藥許可證與安全採收期主表",
+      "columns": {
+        "pesticide_lic_id": "許可證字號 (主鍵, 如 農藥製字第00123號)",
+        "pesticide_name": "農藥中文名稱 (含 Unicode 特殊字元如 滅)",
+        "pesticide_en_name": "農藥英文名稱",
+        "brand_name": "廠牌商品名稱",
+        "vendor_name": "廠商/代理商名稱",
+        "attributes_json": "JSON 擴充欄位 (含 PHI 採收等待期天數)",
+        "created_at": "紀錄建立時間戳記"
+      }
+    },
+    "a12_pest_mrl_alert": {
+      "table_comment": "A12 農檢 MRL 殘留抽驗預警主表",
+      "columns": {
+        "alert_id": "預警紀錄主鍵 (自增)",
+        "crop_name": "作物名稱",
+        "pesticide_name": "農藥名稱",
+        "detected_ppm": "實測殘留濃度 (ppm)",
+        "mrl_limit_ppm": "官方容許量上限 (ppm)",
+        "is_over_limit": "是否超標 (1=超標/OVER_LIMIT, 0=合格)",
+        "attributes_json": "JSON 擴充欄位 (含 MRLRatio 比率)",
+        "created_at": "紀錄建立時間戳記"
+      }
+    },
+    "a13_organic_farm_list": {
+      "table_comment": "A13 有機友善農場認證名冊主表",
+      "columns": {
+        "farm_id": "農場紀錄主鍵 (自增)",
+        "farm_name": "農場名稱",
+        "operator_name": "經營者姓名",
+        "cert_number": "認證字號",
+        "cert_body": "驗證機構",
+        "item_name": "申報資材/品項名稱",
+        "applied_quantity_ton": "申報資材數量 (公噸)",
+        "applied_value_kntd": "申報金額 (千元)",
+        "attributes_json": "JSON 擴充欄位",
+        "created_at": "紀錄建立時間戳記"
+      }
+    },
+    "a14_fertilizer_licenses": {
+      "table_comment": "A14 農糧資材與肥料登記證主表",
+      "columns": {
+        "fertilizer_lic_id": "肥料登記證字號 (主鍵, 如 肥製(質)字第0001001號)",
+        "brand_name": "廠牌商品名稱",
+        "manufacturer_name": "製造廠/業者名稱",
+        "fertilizer_type": "肥料品目類別",
+        "nitrogen_pct": "全氮含量 (%)",
+        "phosphorus_pct": "全磷酸含量 (%)",
+        "potassium_pct": "全氧化鉀含量 (%)",
+        "is_organic_cert": "有機審定旗標 (1=審定合格/ORGANIC_APPROVED, 0=一般)",
+        "expire_date": "有效期限",
+        "attributes_json": "JSON 擴充欄位 (含 NPK_Total 總和)",
+        "created_at": "紀錄建立時間戳記"
+      }
+    },
+    "a20_fishery_products": {
+      "table_comment": "A20 水產產品名冊與行情主表",
+      "columns": {
+        "product_id": "水產品紀錄主鍵 (自增)",
+        "product_name": "水產品名稱",
+        "origin_location": "來源產地",
+        "weight_spec": "重量規格",
+        "storage_method": "保存方式",
+        "avg_price_ntd": "平均成交價",
+        "attributes_json": "JSON 擴充欄位 (含 80% 臺灣在地標籤)",
+        "created_at": "紀錄建立時間戳記"
+      }
+    },
+    "a21_aquaculture_monitoring": {
+      "table_comment": "A21 水產養殖水質與寒害監測主表",
+      "columns": {
+        "station_id": "監測據點代號 (主鍵)",
+        "county_name": "縣市名稱",
+        "town_name": "鄉鎮名稱",
+        "water_temp_c": "水溫 (°C)",
+        "dissolved_oxygen_mg_l": "溶氧量 (mg/L)",
+        "ph_value": "pH 值",
+        "is_freezing_alert": "寒害警報 (1=FREEZING_ALERT水溫<15°C, 0=正常)",
+        "attributes_json": "JSON 擴充欄位",
+        "created_at": "紀錄建立時間戳記"
+      }
+    },
+    "a30_pork_trans_daily": {
+      "table_comment": "A30 毛豬批發拍賣每日行情主表",
+      "columns": {
+        "trans_id": "交易紀錄主鍵 (自增)",
+        "trans_date": "交易日期 (ISO 8601: YYYY-MM-DD)",
+        "market_name": "市場名稱 (如 花蓮縣)",
+        "total_heads": "總拍賣頭數 (頭)",
+        "avg_weight_kg": "平均成交重量 (公斤)",
+        "avg_price_ntd": "平均成交價格 (新台幣元/公斤)",
+        "attributes_json": "JSON 擴充欄位 (含無槓民國年原始日期)",
+        "created_at": "紀錄建立時間戳記"
+      }
+    },
+    "a31_vet_drug_residue": {
+      "table_comment": "A31 動物用藥殘留管制主表",
+      "columns": {
+        "residue_id": "殘留標準主鍵 (自增)",
+        "drug_name": "動物用藥名稱 (如 氯黴素)",
+        "target_livestock": "適用畜產品/部位",
+        "mrl_ppm": "殘留容許量上限 (0.0 表示國定禁藥)",
+        "withdrawal_period_days": "停藥期 (天)",
+        "is_prohibited": "禁藥旗標 (1=PROHIBITED, 0=一般)",
+        "attributes_json": "JSON 擴充欄位",
+        "created_at": "紀錄建立時間戳記"
+      }
+    },
+    "a40_agro_climate_stations": {
+      "table_comment": "A40 農業氣象站歷史觀測主表",
+      "columns": {
+        "station_id": "氣象站代號 (主鍵)",
+        "obs_date": "觀測日期 (ISO 8601)",
+        "temp_c": "平均氣溫 (°C)",
+        "vapour_pressure_hpa": "水氣壓 (hPa)",
+        "obs_count": "觀測點數",
+        "attributes_json": "JSON 擴充欄位",
+        "created_at": "紀錄建立時間戳記"
+      }
+    },
+    "a41_soil_water_pollution": {
+      "table_comment": "A41 土壤與水質環境安全主表",
+      "columns": {
+        "point_id": "監測據點代號 (主鍵)",
+        "county_name": "縣市名稱",
+        "town_name": "鄉鎮名稱",
+        "heavy_metal_name": "重金屬名稱",
+        "concentration_ppm": "實測濃度 (ppm)",
+        "regulatory_limit_ppm": "管制標準上限 (ppm)",
+        "is_high_risk": "高風險旗標 (1=HIGH_RISK PollutionRatio>=1.0, 0=安全)",
+        "attributes_json": "JSON 擴充欄位",
+        "created_at": "紀錄建立時間戳記"
+      }
+    },
+    "a50_agrovoc_concepts": {
+      "table_comment": "A50 FAO AGROVOC 國際農學詞庫概念主表",
+      "columns": {
+        "concept_uri": "國際概念 URI (主鍵)",
+        "pref_label_zh": "繁體中文偏好標籤",
+        "pref_label_en": "英文偏好標籤",
+        "skos_broader_uri": "SKOS 上位概念 URI",
+        "attributes_json": "JSON 擴充欄位",
+        "created_at": "紀錄建立時間戳記"
+      }
+    },
+    "a00_graph_triples": {
+      "table_comment": "A00 GraphRAG 實體圖譜三元組主表",
+      "columns": {
+        "triple_id": "三元組主鍵 (自增)",
+        "subject_uri": "主體 URI/名稱",
+        "predicate": "關係 Predicate",
+        "object_uri": "物體 URI/名稱",
+        "created_at": "紀錄建立時間戳記"
+      }
+    }
+  }
+}

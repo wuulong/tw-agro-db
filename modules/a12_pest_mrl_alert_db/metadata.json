@@ -1,0 +1,25 @@
+{
+  "module_id": "a12_pest_mrl_alert_db",
+  "name": "市售農產品殘留農藥監測 (PestMRL)",
+  "version": "1.0.0",
+  "data_source": {
+    "agency": "衛福部食藥署 (TFDA)",
+    "dataset_name": "市售農產品殘留農藥監測 (PestMRL)",
+    "source_url": "https://data.gov.tw/dataset/140061",
+    "download_method": "opendata_cli / curl",
+    "local_sample_path": "/Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/agro_poc_samples/A31_vet_drug_food_residue.json",
+    "sha256_hash": "5fd637bdcf6569f82422b59f3ad8f8f77062001d8a83642efa5c7ca8998bbfba",
+    "last_updated": "2026-08-20T12:27:14.154050+08:00"
+  },
+  "tables": [
+    "a12_mrl_inspection_records",
+    "a12_mrl_fts"
+  ],
+  "views": [
+    "v_a12_pest_mrl"
+  ],
+  "record_counts": {
+    "a12_mrl_inspection_records": 5
+  },
+  "status": "ACTIVE"
+}

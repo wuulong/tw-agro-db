@@ -1,0 +1,202 @@
+[
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc",
+    "concept_id": "agrovoc",
+    "prefLabel_en": "AGROVOC",
+    "prefLabel_zh_tw": "",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": null,
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_c818f58f",
+    "concept_id": "c_c818f58f",
+    "prefLabel_en": "AGROVOC",
+    "prefLabel_zh_tw": "AGROVOC",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_49842",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_4788",
+    "concept_id": "c_4788",
+    "prefLabel_en": "methods",
+    "prefLabel_zh_tw": "方法",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": null,
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_2208",
+    "concept_id": "c_2208",
+    "prefLabel_en": "design",
+    "prefLabel_zh_tw": "设计",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_330834",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_433",
+    "concept_id": "c_433",
+    "prefLabel_en": "animal husbandry methods",
+    "prefLabel_zh_tw": "家畜饲养方法",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_8532",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_3965",
+    "concept_id": "c_3965",
+    "prefLabel_en": "isolation techniques",
+    "prefLabel_zh_tw": "隔离技术",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_14816",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_27596",
+    "concept_id": "c_27596",
+    "prefLabel_en": "reproduction control",
+    "prefLabel_zh_tw": "繁殖控制",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_331095",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_432",
+    "concept_id": "c_432",
+    "prefLabel_en": "animal housing",
+    "prefLabel_zh_tw": "畜禽舍",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_3678",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_25746",
+    "concept_id": "c_25746",
+    "prefLabel_en": "animal husbandry equipment",
+    "prefLabel_zh_tw": "畜牧设备",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_2631",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_1375",
+    "concept_id": "c_1375",
+    "prefLabel_en": "castration",
+    "prefLabel_zh_tw": "阉割",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_3328",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_6075",
+    "concept_id": "c_6075",
+    "prefLabel_en": "dehorning",
+    "prefLabel_zh_tw": "断角术",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_7533",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_7020",
+    "concept_id": "c_7020",
+    "prefLabel_en": "shading",
+    "prefLabel_zh_tw": "遮荫",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_2595",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_14228",
+    "concept_id": "c_14228",
+    "prefLabel_en": "sex diagnosis",
+    "prefLabel_zh_tw": "性别诊断",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_2238",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_15980",
+    "concept_id": "c_15980",
+    "prefLabel_en": "growth control",
+    "prefLabel_zh_tw": "生长控制",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_330834",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_25756",
+    "concept_id": "c_25756",
+    "prefLabel_en": "marking",
+    "prefLabel_zh_tw": "标记",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_4788",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_26813",
+    "concept_id": "c_26813",
+    "prefLabel_en": "rearing techniques",
+    "prefLabel_zh_tw": "饲养技术",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_14816",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_29461",
+    "concept_id": "c_29461",
+    "prefLabel_en": "rearing systems",
+    "prefLabel_zh_tw": "饲养系统",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_330985",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_32674",
+    "concept_id": "c_32674",
+    "prefLabel_en": "induced lactation",
+    "prefLabel_zh_tw": "诱导泌乳",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_4140",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_35112",
+    "concept_id": "c_35112",
+    "prefLabel_en": "flushing",
+    "prefLabel_zh_tw": "催情补饲",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_16128",
+    "category": "AGROVOC_CORE"
+  },
+  {
+    "uri": "http://aims.fao.org/aos/agrovoc/c_36922",
+    "concept_id": "c_36922",
+    "prefLabel_en": "semen collection",
+    "prefLabel_zh_tw": "采精",
+    "prefLabel_zh_cn": "",
+    "altLabels": [],
+    "broader_uri": "http://aims.fao.org/aos/agrovoc/c_330898",
+    "category": "AGROVOC_CORE"
+  }
+]

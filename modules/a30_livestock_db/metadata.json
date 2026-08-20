@@ -1,0 +1,25 @@
+{
+  "module_id": "a30_livestock_db",
+  "name": "毛豬批發市場交易行情 (LivestockPorkTrans)",
+  "version": "1.0.0",
+  "data_source": {
+    "agency": "中央畜產會 (NAIF) / 農業部",
+    "dataset_name": "毛豬批發市場交易行情 (LivestockPorkTrans)",
+    "source_url": "https://data.gov.tw/dataset/6057",
+    "download_method": "opendata_cli / curl",
+    "local_sample_path": "/Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/agro_poc_samples/A30_livestock_pork_trans.json",
+    "sha256_hash": "93ef8e79169d00cfddfc7924146d74bd6d85b341ee68cb4404d94e02e42e2ea0",
+    "last_updated": "2026-08-20T12:27:14.183704+08:00"
+  },
+  "tables": [
+    "a30_pork_trans_daily",
+    "a30_pork_fts"
+  ],
+  "views": [
+    "v_a30_livestock_pork"
+  ],
+  "record_counts": {
+    "a30_pork_trans_daily": 5
+  },
+  "status": "ACTIVE"
+}
