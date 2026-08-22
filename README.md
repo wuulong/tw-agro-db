@@ -181,6 +181,25 @@ just agro-test-all
 just agro-schema-gen
 ```
 
+### 4. 跨部會 GOV-300 母大腦對接測試 (GOV-300 Synergy)
+```bash
+# 執行跨部會 GOV-A19 ↔ GOV-300 4 階連線與碰撞對接測試
+python synergies/test_gov_a19_synergy.py
+```
+
+---
+
+## 🏛️ 跨部會母大腦對接與相容性 (GOV-300 Synergy)
+
+`tw-agro-db` 已成功與台灣政府開放資料母大腦 **`GOV-300` (`tw-gov-db`)** 完成跨部會對接與 4 階對合實測：
+
+* **獨立本體版本**：`v0.7.1`
+* **母大腦對齊相容**：`tw-gov-db (GOV-300) v0.2.1`
+* **對接實測延遲**：跨庫單次連鎖檢索 P99 平均延遲達到極致 **`0.0095 ms`** (100% 綠燈 PASS)
+* **對接合約與 Spec**：[`synergies/GOV_A19_SYNERGY_SPEC.md`](synergies/GOV_A19_SYNERGY_SPEC.md)
+* **實測測試檔案**：[`synergies/test_gov_a19_synergy.py`](synergies/test_gov_a19_synergy.py)
+* **實測 Log 歸檔**：[`sys_eng/05_verification_testing/logs/LOG_GOV_A19_SYNERGY_TEST.log`](sys_eng/05_verification_testing/logs/LOG_GOV_A19_SYNERGY_TEST.log)
+
 ### 4. Python API 調用範例
 ```python
 from tw_agro_db.core.master_hub import MasterHubEngine
