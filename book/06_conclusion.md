@@ -1,7 +1,7 @@
 # 📘 第 6 章：結語與專案總結 (06_conclusion.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/06_conclusion.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/06_conclusion.md)
 * **專書對照整合**：[00_toc.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/00_toc.md)
 

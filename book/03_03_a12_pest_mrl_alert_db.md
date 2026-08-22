@@ -1,7 +1,7 @@
 # 📘 3.3 A12 農檢 MRL 殘留抽驗預警知識庫 (03_03_a12_pest_mrl_alert_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_03_a12_pest_mrl_alert_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_03_a12_pest_mrl_alert_db.md)
 * **實測對照整合**：[LOG_A12_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A12_TEST.log) (4/4 PASS)
 
@@ -74,7 +74,7 @@ FROM a12_pest_mrl_alert;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A12 特化了 **農藥殘留超標比率 ($MRLRatio$) 演算模型**：
 
@@ -134,4 +134,4 @@ python src/cli/commands_a12.py search "甘藍" --db db/agro.db
 * **物理入庫筆數**：**5 筆** 預警採樣紀錄
 * **單元測試報告**：[test_a12_pest_mrl_alert_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a12_pest_mrl_alert_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A12_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A12_TEST.log)
-* **母大腦鏈結斷言**：在 `test_a00_master_hub.py` (VAL-A00-003) 驗證 View 穿透與 100% 合規/超標斷言。
+* **母大腦鏈結驗證斷言/Assert**：在 `test_a00_master_hub.py` (VAL-A00-003) 驗證 View 穿透與 100% 合規/超標驗證斷言/Assert。

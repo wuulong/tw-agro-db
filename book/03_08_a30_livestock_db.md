@@ -1,7 +1,7 @@
 # 📘 3.8 A30 毛豬批發交易行情知識庫 (03_08_a30_livestock_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_08_a30_livestock_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_08_a30_livestock_db.md)
 * **實測對照整合**：[LOG_A30_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A30_TEST.log) (4/4 PASS)
 
@@ -74,7 +74,7 @@ FROM a30_pork_trans_daily;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A30 特化了 **無槓民國年 (ROC Date) 轉 ISO 8601 標準日期算式**：
 
@@ -119,4 +119,4 @@ python src/cli/commands_a30.py search "花蓮縣" --db db/agro.db
 * **物理入庫筆數**：**5 筆** 毛豬拍賣行情紀錄
 * **單元測試報告**：[test_a30_livestock_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a30_livestock_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A30_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A30_TEST.log)
-* **母大腦鏈結斷言**：VAL-A00-011 驗證花蓮縣市場 291 頭、均價 105.19 元/kg，ISO 日期 2026-08-19。
+* **母大腦鏈結驗證斷言/Assert**：VAL-A00-011 驗證花蓮縣市場 291 頭、均價 105.19 元/kg，ISO 日期 2026-08-19。

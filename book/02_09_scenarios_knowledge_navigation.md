@@ -1,11 +1,11 @@
-# 📘 2.9 4 大真實農業情境之知識流轉與 DB 串接接力 (02_09_scenarios_knowledge_navigation.md)
+# 📘 2.9 4 大真實農業情境之知識流動轉化與 DB 串接接力 (02_09_scenarios_knowledge_navigation.md)
 
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/02_09_scenarios_knowledge_navigation.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/02_09_scenarios_knowledge_navigation.md)
 * **實測證明**：[test_a00_master_hub.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a00_master_hub.py) (24/24 PASS)
 
 ---
 
-## ⏱️ 2.9 4 大真實農業情境之知識流轉與 DB 串接接力
+## ⏱️ 2.9 4 大真實農業情境之知識流動轉化與 DB 串接接力
 
 當第一線農民、食安稽查員或 AI Agent 面臨複合式的農業問題時，A00 母大腦會發動跨資料庫的業務接力（Cross-Domain Service Chaining），將分散於各 DB 的片段資訊連點成線：
 

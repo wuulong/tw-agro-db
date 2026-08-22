@@ -1,7 +1,7 @@
 # 📘 3.6 A20 水產產品與市場行情知識庫 (03_06_a20_fishery_market_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_06_a20_fishery_market_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_06_a20_fishery_market_db.md)
 * **實測對照整合**：[LOG_A20_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A20_TEST.log) (4/4 PASS)
 
@@ -81,7 +81,7 @@ FROM a20_fishery_products;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A20 特化了 **管道符描述解析器 (Pipe Parser)** 與在地養殖標籤算式：
 
@@ -125,4 +125,4 @@ python src/cli/commands_a20.py search "秋刀魚" --db db/agro.db
 * **物理入庫筆數**：**5 筆** 水產品名冊紀錄
 * **單元測試報告**：[test_a20_fishery_market_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a20_fishery_market_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A20_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A20_TEST.log)
-* **在地標籤斷言**：VAL-003 驗證台灣在地養殖水產品佔比高達 **80% (4/5 筆)**。
+* **在地標籤驗證斷言/Assert**：VAL-003 驗證台灣在地養殖水產品佔比高達 **80% (4/5 筆)**。

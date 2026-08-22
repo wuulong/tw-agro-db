@@ -1,7 +1,7 @@
 # 📘 3.50 A50 FAO AGROVOC 國際農學詞庫知識庫 (03_50_a50_fao_agrovoc_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_50_a50_fao_agrovoc_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_50_a50_fao_agrovoc_db.md)
 * **實測對照整合**：[LOG_A50_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A50_TEST.log) (4/4 PASS)
 
@@ -83,7 +83,7 @@ FROM a50_agrovoc_concepts;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A50 特化了 **LOD SKOS 概念語意相似度對照整合模型**：
 
@@ -127,4 +127,4 @@ python src/cli/commands_a50.py search "coconut" --db db/agro.db
 * **物理入庫筆數**：**40,097 筆** 核心概念，**82,954 筆** 多語標籤
 * **單元測試報告**：[test_a50_fao_agrovoc_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a50_fao_agrovoc_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A50_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A50_TEST.log)
-* **母大腦鏈結斷言**：VAL-A00-018/019 實測 139 筆在地實體語意碰撞，精確將台灣在地「椰子」以 $Score = 1.0$ 對照整合至聯合國 FAO `c_1784`。
+* **母大腦鏈結驗證斷言/Assert**：VAL-A00-018/019 實測 139 筆在地實體語意碰撞，精確將台灣在地「椰子」以 $Score = 1.0$ 對照整合至聯合國 FAO `c_1784`。

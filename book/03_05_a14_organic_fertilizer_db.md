@@ -1,7 +1,7 @@
 # 📘 3.5 A14 農糧資材與肥料登記證知識庫 (03_05_a14_organic_fertilizer_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_05_a14_organic_fertilizer_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_05_a14_organic_fertilizer_db.md)
 * **實測對照整合**：[LOG_A14_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A14_TEST.log) (4/4 PASS)
 
@@ -80,7 +80,7 @@ FROM a14_fertilizer_licenses;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A14 特化了 **N-P-K 養分總和與有機品質分級算式**：
 
@@ -126,4 +126,4 @@ python src/cli/commands_a14.py search "寶綠多" --db db/agro.db
 * **物理入庫筆數**：**5 筆** 登記證紀錄，**3 筆** 有機審定合格資材
 * **單元測試報告**：[test_a14_organic_fertilizer_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a14_organic_fertilizer_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A14_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A14_TEST.log)
-* **母大腦鏈結斷言**：VAL-A00-023 實測 View 穿透與有機資材標記，VAL-A00-024 驗證 50 筆資材網碰撞。
+* **母大腦鏈結驗證斷言/Assert**：VAL-A00-023 實測 View 穿透與有機資材標記，VAL-A00-024 驗證 50 筆資材網碰撞。

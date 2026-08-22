@@ -1,7 +1,7 @@
 {
   "module_id": "a50_fao_agrovoc_db",
   "name": "國際農學多語主題詞庫 (AGROVOC LOD)",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "data_source": {
     "agency": "聯合國糧農組織 (FAO)",
     "dataset_name": "國際農學多語主題詞庫 (AGROVOC LOD)",

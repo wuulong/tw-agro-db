@@ -1,7 +1,7 @@
 {
   "module_id": "a40_agro_climate_db",
   "name": "農業氣象站每日觀測數據 (AgroClimateStations)",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "data_source": {
     "agency": "農業部試驗所 (TFRI) / 氣象署",
     "dataset_name": "農業氣象站每日觀測數據 (AgroClimateStations)",

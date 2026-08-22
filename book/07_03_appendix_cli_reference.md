@@ -17,6 +17,9 @@ tw-agro-cli search <KEYWORD> [--json] [--db PATH]
 
 # 3. 全庫 5 大 Safety Mesh 食安、寒害與重金屬診斷
 tw-agro-cli doctor [--db PATH]
+
+# 4. 跨部會 GOV-300 母大腦 (tw-gov-db) 4 階對照整合測試套件
+python synergies/test_gov_a19_synergy.py
 ```
 
 ---

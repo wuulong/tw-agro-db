@@ -1,7 +1,7 @@
 # 📘 3.9 A31 動物用藥與畜產品殘留管制知識庫 (03_09_a31_vet_drug_food_residue_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_09_a31_vet_drug_food_residue_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_09_a31_vet_drug_food_residue_db.md)
 * **實測對照整合**：[LOG_A31_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A31_TEST.log) (4/4 PASS)
 
@@ -74,7 +74,7 @@ FROM a31_vet_drug_residue;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A31 特化了 **動物用藥禁藥零容忍分級算式**：
 
@@ -116,4 +116,4 @@ python src/cli/commands_a31.py search "氯黴素" --db db/agro.db
 * **物理入庫筆數**：**5 筆** 動物用藥殘留紀錄
 * **單元測試報告**：[test_a31_vet_drug_food_residue_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a31_vet_drug_food_residue_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A31_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A31_TEST.log)
-* **母大腦鏈結斷言**：VAL-A00-022 實測毛豬食安網碰撞 6 筆，精確截獲氯黴素 (MRL 0.0ppm) 標註 `PROHIBITED` 禁藥警告。
+* **母大腦鏈結驗證斷言/Assert**：VAL-A00-022 實測毛豬食安網碰撞 6 筆，精確截獲氯黴素 (MRL 0.0ppm) 標註 `PROHIBITED` 禁藥警告。

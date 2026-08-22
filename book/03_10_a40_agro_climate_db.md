@@ -1,7 +1,7 @@
 # 📘 3.10 A40 農業氣象站歷史觀測知識庫 (03_10_a40_agro_climate_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_10_a40_agro_climate_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_10_a40_agro_climate_db.md)
 * **實測對照整合**：[LOG_A40_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A40_TEST.log) (4/4 PASS)
 
@@ -72,7 +72,7 @@ FROM a40_agro_climate_stations;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A40 特化了 **微氣候長週期溫濕度序列模型**：
 
@@ -114,4 +114,4 @@ python src/cli/commands_a40.py search "100213" --db db/agro.db
 * **物理入庫筆數**：**2,527 點** 觀測歷史紀錄
 * **單元測試報告**：[test_a40_agro_climate_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a40_agro_climate_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A40_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A40_TEST.log)
-* **母大腦鏈結斷言**：VAL-A00-014/015 實測測站 100213 觀測點數 96 點與跨 Pillar 氣候對照整合。
+* **母大腦鏈結驗證斷言/Assert**：VAL-A00-014/015 實測測站 100213 觀測點數 96 點與跨 Pillar 氣候對照整合。

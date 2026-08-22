@@ -1,7 +1,7 @@
 # 📘 3.11 A41 土壤與水質環境安全知識庫 (03_11_a41_soil_water_pollution_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_11_a41_soil_water_pollution_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_11_a41_soil_water_pollution_db.md)
 * **實測對照整合**：[LOG_A41_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A41_TEST.log) (4/4 PASS)
 
@@ -76,9 +76,9 @@ FROM a41_soil_water_pollution;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
-A41 特化了 **重金屬污染比率 ($PollutionRatio$) 演演演算法**：
+A41 特化了 **重金屬污染比率 ($PollutionRatio$) 演演演演算法**：
 
 $$PollutionRatio = \frac{\text{實測濃度 (concentration\_ppm)}}{\text{管制標準 (regulatory\_limit\_ppm)}}$$
 
@@ -120,4 +120,4 @@ python src/cli/commands_a41.py search "北投區" --db db/agro.db
 * **物理入庫筆數**：**5 筆** 土壤監測據點紀錄
 * **單元測試報告**：[test_a41_soil_water_pollution_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a41_soil_water_pollution_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A41_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A41_TEST.log)
-* **母大腦鏈結斷言**：VAL-A00-020 實測臺北市北投區據點重金屬鎘 $Ratio = 1.0$，自動觸發 `HIGH_RISK` 環境安全警告。
+* **母大腦鏈結驗證斷言/Assert**：VAL-A00-020 實測臺北市北投區據點重金屬鎘 $Ratio = 1.0$，自動觸發 `HIGH_RISK` 環境安全警告。

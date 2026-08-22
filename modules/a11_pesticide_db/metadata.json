@@ -1,7 +1,7 @@
 {
   "module_id": "a11_pesticide_db",
   "name": "農藥許可證資料庫 (PesticideLic)",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "data_source": {
     "agency": "農業部防檢署 (BAPHIQ)",
     "dataset_name": "農藥許可證資料庫 (PesticideLic)",

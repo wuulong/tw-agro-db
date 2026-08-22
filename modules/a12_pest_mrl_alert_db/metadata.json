@@ -1,7 +1,7 @@
 {
   "module_id": "a12_pest_mrl_alert_db",
   "name": "市售農產品殘留農藥監測 (PestMRL)",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "data_source": {
     "agency": "衛福部食藥署 (TFDA)",
     "dataset_name": "市售農產品殘留農藥監測 (PestMRL)",

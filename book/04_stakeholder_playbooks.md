@@ -1,7 +1,7 @@
 # 📘 第 4 章：4 大領域利害關係人實戰劇本 Playbook (04_stakeholder_playbooks.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/04_stakeholder_playbooks.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/04_stakeholder_playbooks.md)
 * **對照整合測試網**：[SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md)
 
@@ -14,7 +14,7 @@
 ```mermaid
 flowchart LR
     Step1["1. 領域現實痛點<br/>(Pain Points)"]
-    Step2["2. 資料流轉路徑<br/>(Data Flow Path)"]
+    Step2["2. 資料流動轉化路徑<br/>(Data Flow Path)"]
     Step3["3. CLI 串接指令集<br/>(CLI Commands Chaining)"]
     Step4["4. 資料結果與決策解讀<br/>(Decision Interpretation)"]
     Step5["5. 風險防護與最佳實踐<br/>(Risk Prevention)"]
@@ -30,7 +30,7 @@ flowchart LR
 ### 1. 領域現實痛點
 第一線有機農民擬栽種「椰子」，面臨兩大抉擇：一是不知哪裡可以買到農業部審定合格之有機資材（防止誤用違規肥料導致有機驗證遭撤銷）；二是不知當前市場價格波動是否劇烈，擔心天災搶種導致收益崩盤。
 
-### 2. 資料流轉路徑
+### 2. 資料流動轉化路徑
 `A10 (農糧行情)` ➔ `A14 (有機肥料登記證)` ➔ `A13 (有機農場驗證名冊)` ➔ `A11 (農藥許可證 PHI)`
 
 ### 3. CLI 命令行串接指令集
@@ -62,7 +62,7 @@ tw-agro-cli search "椰子" --db db/agro.db
 ### 1. 領域現實痛點
 團膳業者與食安稽查員在採購「批發市場肉品」與「學校午餐食材」時，極易因事後抽驗延遲（數月後才出報告），導致違規含有禁藥（如氯黴素）或農藥殘留超標的食材被學生與消費者吃下肚。
 
-### 2. 資料流轉路徑
+### 2. 資料流動轉化路徑
 `A30 (毛豬拍賣)` + `A31 (動物用藥)` ➔ `a00_livestock_pork_safety_mesh` ➔ `A12 (農檢 MRL 預警)`
 
 ### 3. CLI 命令行串接指令集
@@ -94,7 +94,7 @@ tw-agro-cli doctor --db db/agro.db
 ### 1. 領域現實痛點
 開發農業諮詢 Chatbot 或 Agent 時，LLM 經常因缺乏結構化 Domain Grounding 而產生嚴重的「農業知識幻覺」（如胡亂建議農藥品項或錯估採收期）。
 
-### 2. 資料流轉路徑
+### 2. 資料流動轉化路徑
 `a00_graph_triples` (346 筆 SQLite-RDF) ➔ `fts_agro_global` (18,725 筆倒排) ➔ LLM Agent Tool-Calling
 
 ### 3. CLI 命令行串接指令集
@@ -125,7 +125,7 @@ tw-agro-cli search "椰子" --json --db db/agro.db
 ### 1. 領域現實痛點
 農業經濟學家與氣候變遷研究員在評估「極端氣候與農地重金屬對區域農業的影響」時，過往因資料散落於氣象署、環境部與農糧署，難以進行跨域面板資料 (Panel Data) 回歸分析。
 
-### 2. 資料流轉路徑
+### 2. 資料流動轉化路徑
 `A41 (土壤水質重金屬)` ➔ `A40 (農業氣象)` ➔ `A50 (FAO AGROVOC LOD)` ➔ `A10 (農糧行情)`
 
 ### 3. CLI 命令行串接指令集
@@ -187,3 +187,18 @@ triples = hub.get_graph_triples(entity_name="椰子")
 - `DatabaseConnectionError`：資料庫路徑無效或權限不足。
 - `SchemaValidationError`：`attributes_json` 不符合 JSON Schema 規範。
 - `EntityNotFoundException`：檢索實體不存在時回傳空列表，不崩潰。
+
+### 5. 跨部會 GOV-300 母大腦整合 SDK (DomainRegistryResolver)
+當需要與母大腦 `tw-gov-db (GOV-300)` 進行跨部會協同連線時，可直接呼叫共享對接套件：
+
+```python
+from synergies.test_gov_a19_synergy import DomainRegistryResolver
+
+resolver = DomainRegistryResolver()
+# 1. 取得跨專案連線
+conn = resolver.get_domain_core_db_connection("GOV-300", "universal_keys.sqlite")
+
+# 2. 發動跨部會 CLI 命令
+cli_out = resolver.run_domain_cli("GOV-300", "zipcode", ["臺北市中正區"])
+print(cli_out)
+```

@@ -7,7 +7,7 @@
 # 📘 《台灣農漁畜開放資料全景圖鑑：從產地行情到食安防禦的資料體系》全書目錄 (00_toc.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔目錄**：[events-2026Q3/agro-db-in/tw-agro-db/book/00_toc.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/00_toc.md)
 
 ---
@@ -28,7 +28,7 @@
   - [2.6 農業氣象觀測與農地重金屬環境安全體系](02_06_agro_climate_environment_system.md)
   - [2.7 聯合國 FAO AGROVOC 國際農學多語體系](02_07_fao_agrovoc_lod_system.md)
   - [2.8 A00 母大腦：將農業知識凝練為 5 大事前融合防護網 (2.8.1 ~ 2.8.6)](02_08_a00_safety_meshes_and_graphrag.md) (`Fig 2.8`, `Fig 2.8.1`)
-  - [2.9 4 大真實農業情境之知識流轉與 DB 串接接力](02_09_scenarios_knowledge_navigation.md) (`Fig 2.9`)
+  - [2.9 4 大真實農業情境之知識流動轉化與 DB 串接接力](02_09_scenarios_knowledge_navigation.md) (`Fig 2.9`)
   - [2.10 摘要：如何透過 A00 完全掌握台灣農漁畜資料體系](02_10_summary_master_control.md)
 * **第 3 章：12 大農業知識資產與 DB 百科圖鑑 (通用 7 大維度獨立檔案)**
   - [3.0 全章子模組撰寫規範與通用 7 大維度架構說明](03_00_structure_guide.md) (`Fig 3.0`)
@@ -71,7 +71,7 @@
 # 📘 第 1 章：專案願景與農業數位轉型使命 (01_vision_and_mission.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/01_vision_and_mission.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/01_vision_and_mission.md)
 * **對照整合審計**：[SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md)
 
@@ -146,7 +146,7 @@ flowchart TD
 # 📘 2.0 第 2 章：A00 母大腦全景架構與農業知識體系解構 (02_00_architecture_overview.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/02_00_architecture_overview.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/02_00_architecture_overview.md)
 * **對照整合審計**：[SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md)
 
@@ -317,7 +317,7 @@ flowchart TD
 
 ## ❄️ 2.4.2 水溫 $<15^\circ\text{C}$ 寒害與溶氧 $<3\text{mg/L}$ 缺氧預警 Scorer 解構
 
-沿海養殖池受冬季寒流與夏季悶熱影響極大。氣候與水質知識體系建立實時預警演演演算法：
+沿海養殖池受冬季寒流與夏季悶熱影響極大。氣候與水質知識體系建立實時預警演演演演算法：
 
 * **解構重點**：
   - **寒害預警**：當實測水溫 $< 15^\circ\text{C}$ 且持續下降時，觸發 `FREEZING_ALERT` 防寒警報。
@@ -464,15 +464,15 @@ flowchart LR
     Pork & Vet --> E4 --> M4
     Crop & Fert --> E5 --> M5
 ```
-*Fig 2.8: A00 5 大事前融合食安與環境網演演演算法串接圖*
+*Fig 2.8: A00 5 大事前融合食安與環境網演演演演算法串接圖*
 
 ---
 
-### 2.8.1 農藥採收期預警網演演演算法 (`a00_crop_pesticide_safety_mesh`)
+### 2.8.1 農藥採收期預警網演演演演算法 (`a00_crop_pesticide_safety_mesh`)
 
 農藥採收期安全網解決了農民「病蟲害爆發時誤用長等待期農藥而遭受開罰銷毀」的現實痛點。
 
-* **融合演演演算法與邏輯**：
+* **融合演演演演算法與邏輯**：
   引擎主動汲取 `A10` 作物字典、`A11` 9,993 筆農藥許可證與 `A12` 衛福部 MRL 容許量。依據安全採收天數 (PHI) 計算風險等級：
   - **`HIGH_RISK`**：當安全採收等待期 $\ge 7$ 天，或稀釋倍數未達標準。
   - **`SAFE`**：採收等待期 $< 7$ 天或屬於免訂 MRL 之生物農藥。
@@ -481,11 +481,11 @@ flowchart LR
 
 ---
 
-### 2.8.2 毛豬與動物用藥食安防禦網演演演算法 (`a00_livestock_pork_safety_mesh`)
+### 2.8.2 毛豬與動物用藥食安防禦網演演演演算法 (`a00_livestock_pork_safety_mesh`)
 
 畜產品食安容不得半點死角。本網專為肉品拍賣市場與稽查團隊打造，解決禁藥流入消費市場的危害。
 
-* **融合演演演算法與邏輯**：
+* **融合演演演演算法與邏輯**：
   跨庫調用 `A30` 全台 23 處毛豬市場交易部位（如極品去骨羊肉、豬肝）與 `A31` 動物用藥殘留標準。
   - **`PROHIBITED` (國定禁藥零容忍)**：凡動物用藥殘留容許量 $MRL == 0.0\text{ ppm}$（如氯黴素、乙型受體素），系統自動觸發最高等級食安封鎖標籤。
 * **物理實測資料**：
@@ -493,11 +493,11 @@ flowchart LR
 
 ---
 
-### 2.8.3 農糧資材雙輪食安合規網演演演算法 (`a00_crop_fertilizer_safety_mesh`)
+### 2.8.3 農糧資材雙輪食安合規網演演演演算法 (`a00_crop_fertilizer_safety_mesh`)
 
 有機農業栽培對於肥料與資材有極為嚴格的法規審定標準。
 
-* **融合演演演算法與邏輯**：
+* **融合演演演演算法與邏輯**：
   融合 `A10` 作物字典、`A13` 有機農場驗證名冊與 `A14` 肥料登記證。
   - **`ORGANIC_COMPLIANT`**：肥料登記證標註 `is_organic_cert == 1`（如寶綠多精華有機肥），自動標記為有機農場合規可用資材。
   - **`CONVENTIONAL_ONLY`**：高濃度化學複合肥料（$NPK\_Total \ge 20\%$），限制僅能用於慣行農法。
@@ -506,11 +506,11 @@ flowchart LR
 
 ---
 
-### 2.8.4 區域農地重金屬環境安全網演演演算法 (`a00_regional_environmental_safety_mesh`)
+### 2.8.4 區域農地重金屬環境安全網演演演演算法 (`a00_regional_environmental_safety_mesh`)
 
 農地重金屬污染（鎘、鉬、砷、鉛等）直接關乎國土生態安全與食用作物衛生。
 
-* **融合演演演算法與邏輯**：
+* **融合演演演演算法與邏輯**：
   匯聚 `A41` 全台土壤與灌溉水質監測據點，計算重金屬污染比率：
   $$PollutionRatio = \frac{\text{實測濃度 (concentration\_ppm)}}{\text{管制標準 (regulatory\_limit\_ppm)}}$$
   - **`HIGH_RISK`**：$PollutionRatio \ge 1.0$（實測濃度已達或超過管制標準）。
@@ -520,11 +520,11 @@ flowchart LR
 
 ---
 
-### 2.8.5 跨領域國際 FAO AGROVOC 本體對照整合網演演演算法 (`a00_agrovoc_cross_domain_mesh`)
+### 2.8.5 跨領域國際 FAO AGROVOC 本體對照整合網演演演演算法 (`a00_agrovoc_cross_domain_mesh`)
 
 解決台灣在地特有農漁畜名稱無法與國際生醫與農業 LOD 知識圖譜接軌的困境。
 
-* **融合演演演算法與邏輯**：
+* **融合演演演演算法與邏輯**：
   將 `A10` 農糧作物、`A20` 水產品與 `A30` 毛豬名稱，與 `A50` 聯合國糧農組織 FAO AGROVOC 40,097 概念進行語意對照整合，計算語意相似度分值 ($Score \in [0.0, 1.0]$)。
 * **物理實測資料**：
   在 `VAL-A00-018` 測試中，成功完成 139 筆跨域本體碰撞。將台灣在地作物「椰子」以 $Score = 1.0$ 的精確度，對照整合至聯合國 FAO 國際概念 `http://aims.fao.org/aos/agrovoc/c_1784`。
@@ -571,14 +571,14 @@ graph LR
 ---
 
 
-# 📘 2.9 4 大真實農業情境之知識流轉與 DB 串接接力 (02_09_scenarios_knowledge_navigation.md)
+# 📘 2.9 4 大真實農業情境之知識流動轉化與 DB 串接接力 (02_09_scenarios_knowledge_navigation.md)
 
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/02_09_scenarios_knowledge_navigation.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/02_09_scenarios_knowledge_navigation.md)
 * **實測證明**：[test_a00_master_hub.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a00_master_hub.py) (24/24 PASS)
 
 ---
 
-## ⏱️ 2.9 4 大真實農業情境之知識流轉與 DB 串接接力
+## ⏱️ 2.9 4 大真實農業情境之知識流動轉化與 DB 串接接力
 
 當第一線農民、食安稽查員或 AI Agent 面臨複合式的農業問題時，A00 母大腦會發動跨資料庫的業務接力（Cross-Domain Service Chaining），將分散於各 DB 的片段資訊連點成線：
 
@@ -654,7 +654,22 @@ sequenceDiagram
 
 ---
 
-## 🎯 2.10 摘要：如何透過 A00 完全掌握台灣農漁畜資料體系
+## 🏛️ 2.10.1 跨部會 GOV-300 母大腦對接與相容性矩陣 (Compatibility Matrix)
+
+`tw-agro-db` 不僅能獨立作為單一 SQLite 知識大腦，更已成功與全台灣政府開放資料母大腦 **`GOV-300` (`tw-gov-db`)** 完成跨部會對接與 4 階對照整合測試：
+
+* **獨立本體版本**：`v0.7.1`
+* **母大腦相容對照整合**：`tw-gov-db (GOV-300) v0.2.1`
+* **實測對接效能**：跨庫單次連鎖檢索 P99 平均延遲達到極致的 **`0.0095 ms`**（遠低於 $10\text{ ms}$ 門檻）。
+* **四大基石對接成果**：
+  1. **基石一 OID 歸併**：成功將「農業部」、「農糧署」對齊至權威 OID `2.16.886.101.20003.20064`。
+  2. **基石二門牌地碼**：成功反查 6 碼門牌區號 `630001` 與地籍段號。
+  3. **基石三水系氣象**：450 個氣象測站 (`station_registry`) WGS84 座標碰撞周邊 20km 之休閒農場。
+  4. **基石四法人企業**：對照整合全台 342 家農漁會法人統編與信用部/推廣課名錄。
+
+---
+
+## 💡 2.10.2 專案維運與總結方針摘要：如何透過 A00 完全掌握台灣農漁畜資料體系
 
 透過第 2 章解構的 A00 母大腦大一統架構，人類工程師、農業專家與 AI Agent 擁有了 **3 大通盤掌握台灣農漁畜開放資料體系的核心能力**：
 
@@ -680,7 +695,7 @@ sequenceDiagram
 # 📘 3.0 全章子模組撰寫規範與通用 7 大維度架構說明 (03_00_structure_guide.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_00_structure_guide.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_00_structure_guide.md)
 * **對照整合審計**：[SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md)
 
@@ -698,7 +713,7 @@ flowchart TD
         D1["1. 領域寫作意圖與解決的農業問題"]
         D2["2. 原始開放資料源與政府權責機構"]
         D3["3. SQLite 資料庫 Schema 與資料模型"]
-        D4["4. 領域特化演演演算法與資料指標"]
+        D4["4. 領域特化演演演演算法與資料指標"]
         D5["5. 跨模組對接拓樸與資料流向 (含 Mermaid 拓樸圖)"]
         D6["6. CLI 指令與 Agent 工具呼叫"]
         D7["7. 實測物理資料與驗證紀錄"]
@@ -728,7 +743,7 @@ flowchart TD
 * **【必須包含 `attributes_json` Spec】**：詳細解構 `attributes_json` 的擴充 Key-Value 規格。
 * **【必須包含一筆真實範例資料】**：給出一筆完整的真實資料列 (Sample Row) 與 JSON Payload。
 
-### 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+### 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 * 詳細解構該 DB 獨有的計算公式與品質標籤（如 A10 價格變異係數 $CV$、A14 NPK 養分總和算式、A21 水質 $15^\circ\text{C}$ 寒害 Scorer、A30 無槓民國年 ISO 轉碼、A41 重金屬 $PollutionRatio$ 等）。
 
 ### 5. 跨模組對接拓樸與資料流向 (Cross-Module Topology)
@@ -767,7 +782,7 @@ flowchart TD
 # 📘 3.1 A10 台灣農糧批發交易行情知識庫 (03_01_a10_tw_crop_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_01_a10_tw_crop_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_01_a10_tw_crop_db.md)
 * **實測對照整合**：[LOG_A10_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A10_TEST.log) (4/4 PASS)
 
@@ -846,7 +861,7 @@ FROM a10_crop_farm_trans;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A10 特化了 **農糧市場價格變異係數 (Coefficient of Variation, CV)** 離散算式：
 
@@ -908,7 +923,7 @@ python src/cli/commands_a10.py search "椰子" --db db/agro.db
 * **物理入庫筆數**：**6,123 筆** 交易紀錄
 * **單元測試報告**：[test_a10_tw_crop_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a10_tw_crop_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A10_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A10_TEST.log)
-* **母大腦鏈結斷言**：在 `test_a00_master_hub.py` (VAL-A00-001) 實測椰子全台均價 19.77 元/kg，離散 CV 0.0376。
+* **母大腦鏈結驗證斷言/Assert**：在 `test_a00_master_hub.py` (VAL-A00-001) 實測椰子全台均價 19.77 元/kg，離散 CV 0.0376。
 
 
 
@@ -918,7 +933,7 @@ python src/cli/commands_a10.py search "椰子" --db db/agro.db
 # 📘 3.2 A11 農藥許可證與安全採收期知識庫 (03_02_a11_pesticide_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_02_a11_pesticide_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_02_a11_pesticide_db.md)
 * **實測對照整合**：[LOG_A11_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A11_TEST.log) (4/4 PASS)
 
@@ -1000,7 +1015,7 @@ FROM a11_pesticide_licenses;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A11 特化了 **安全採收等待期 (PHI) 風險分級算式**：
 
@@ -1056,7 +1071,7 @@ python src/cli/commands_a11.py search "滅" --db db/agro.db
 * **物理入庫筆數**：**9,993 筆** 許可證紀錄
 * **單元測試報告**：[test_a11_pesticide_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a11_pesticide_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A11_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A11_TEST.log)
-* **特殊字元斷言**：VAL-002 驗證 FTS5 倒排精確命中 Unicode 特殊字元「滅」1 筆紀錄。
+* **特殊字元驗證斷言/Assert**：VAL-002 驗證 FTS5 倒排精確命中 Unicode 特殊字元「滅」1 筆紀錄。
 
 
 
@@ -1066,7 +1081,7 @@ python src/cli/commands_a11.py search "滅" --db db/agro.db
 # 📘 3.3 A12 農檢 MRL 殘留抽驗預警知識庫 (03_03_a12_pest_mrl_alert_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_03_a12_pest_mrl_alert_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_03_a12_pest_mrl_alert_db.md)
 * **實測對照整合**：[LOG_A12_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A12_TEST.log) (4/4 PASS)
 
@@ -1139,7 +1154,7 @@ FROM a12_pest_mrl_alert;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A12 特化了 **農藥殘留超標比率 ($MRLRatio$) 演算模型**：
 
@@ -1199,7 +1214,7 @@ python src/cli/commands_a12.py search "甘藍" --db db/agro.db
 * **物理入庫筆數**：**5 筆** 預警採樣紀錄
 * **單元測試報告**：[test_a12_pest_mrl_alert_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a12_pest_mrl_alert_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A12_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A12_TEST.log)
-* **母大腦鏈結斷言**：在 `test_a00_master_hub.py` (VAL-A00-003) 驗證 View 穿透與 100% 合規/超標斷言。
+* **母大腦鏈結驗證斷言/Assert**：在 `test_a00_master_hub.py` (VAL-A00-003) 驗證 View 穿透與 100% 合規/超標驗證斷言/Assert。
 
 
 
@@ -1209,7 +1224,7 @@ python src/cli/commands_a12.py search "甘藍" --db db/agro.db
 # 📘 3.4 A13 有機友善農場認證名冊知識庫 (03_04_a13_organic_cert_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_04_a13_organic_cert_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_04_a13_organic_cert_db.md)
 * **實測對照整合**：[LOG_A13_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A13_TEST.log) (4/4 PASS)
 
@@ -1286,9 +1301,9 @@ FROM a13_organic_farm_list;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
-A14 肥料與資材與 A13 的合規比對演演演算法：
+A14 肥料與資材與 A13 的合規比對演演演演算法：
 
 $$\text{OrganicValidity} = \begin{cases} \text{VALID}, & \text{if CertNumber is Active and Body approved} \\ \text{INVALID}, & \text{otherwise} \end{cases}$$
 
@@ -1330,7 +1345,7 @@ python src/cli/commands_a13.py search "硫酸銨" --db db/agro.db
 * **物理入庫筆數**：**10 筆** 有機資材申報紀錄
 * **單元測試報告**：[test_a13_organic_cert_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a13_organic_cert_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A13_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A13_TEST.log)
-* **母大腦鏈結斷言**：VAL-A00-004 實測硫酸銨申報數量 6739.024 噸、價值 47,582 千元。
+* **母大腦鏈結驗證斷言/Assert**：VAL-A00-004 實測硫酸銨申報數量 6739.024 噸、價值 47,582 千元。
 
 
 
@@ -1340,7 +1355,7 @@ python src/cli/commands_a13.py search "硫酸銨" --db db/agro.db
 # 📘 3.5 A14 農糧資材與肥料登記證知識庫 (03_05_a14_organic_fertilizer_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_05_a14_organic_fertilizer_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_05_a14_organic_fertilizer_db.md)
 * **實測對照整合**：[LOG_A14_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A14_TEST.log) (4/4 PASS)
 
@@ -1419,7 +1434,7 @@ FROM a14_fertilizer_licenses;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A14 特化了 **N-P-K 養分總和與有機品質分級算式**：
 
@@ -1465,7 +1480,7 @@ python src/cli/commands_a14.py search "寶綠多" --db db/agro.db
 * **物理入庫筆數**：**5 筆** 登記證紀錄，**3 筆** 有機審定合格資材
 * **單元測試報告**：[test_a14_organic_fertilizer_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a14_organic_fertilizer_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A14_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A14_TEST.log)
-* **母大腦鏈結斷言**：VAL-A00-023 實測 View 穿透與有機資材標記，VAL-A00-024 驗證 50 筆資材網碰撞。
+* **母大腦鏈結驗證斷言/Assert**：VAL-A00-023 實測 View 穿透與有機資材標記，VAL-A00-024 驗證 50 筆資材網碰撞。
 
 
 
@@ -1475,7 +1490,7 @@ python src/cli/commands_a14.py search "寶綠多" --db db/agro.db
 # 📘 3.6 A20 水產產品與市場行情知識庫 (03_06_a20_fishery_market_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_06_a20_fishery_market_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_06_a20_fishery_market_db.md)
 * **實測對照整合**：[LOG_A20_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A20_TEST.log) (4/4 PASS)
 
@@ -1555,7 +1570,7 @@ FROM a20_fishery_products;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A20 特化了 **管道符描述解析器 (Pipe Parser)** 與在地養殖標籤算式：
 
@@ -1599,7 +1614,7 @@ python src/cli/commands_a20.py search "秋刀魚" --db db/agro.db
 * **物理入庫筆數**：**5 筆** 水產品名冊紀錄
 * **單元測試報告**：[test_a20_fishery_market_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a20_fishery_market_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A20_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A20_TEST.log)
-* **在地標籤斷言**：VAL-003 驗證台灣在地養殖水產品佔比高達 **80% (4/5 筆)**。
+* **在地標籤驗證斷言/Assert**：VAL-003 驗證台灣在地養殖水產品佔比高達 **80% (4/5 筆)**。
 
 
 
@@ -1609,7 +1624,7 @@ python src/cli/commands_a20.py search "秋刀魚" --db db/agro.db
 # 📘 3.7 A21 水產養殖水質與寒害監測知識庫 (03_07_a21_aquaculture_monitoring_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_07_a21_aquaculture_monitoring_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_07_a21_aquaculture_monitoring_db.md)
 * **實測對照整合**：[LOG_A21_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A21_TEST.log) (4/4 PASS)
 
@@ -1684,7 +1699,7 @@ FROM a21_aquaculture_monitoring;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A21 特化了 **養殖水溫寒害與溶氧缺氧二元預警算式**：
 
@@ -1728,7 +1743,7 @@ python src/cli/commands_a21.py search "七股區" --db db/agro.db
 * **物理入庫筆數**：**5 筆** 養殖水質據點紀錄
 * **單元測試報告**：[test_a21_aquaculture_monitoring_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a21_aquaculture_monitoring_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A21_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A21_TEST.log)
-* **寒害斷言**：VAL-002 驗證實測水溫 **$13.08^\circ\text{C}$**，精確觸發 `FREEZING_ALERT` 防寒警報與溶氧 2.8 mg/L 缺氧警告。
+* **寒害驗證斷言/Assert**：VAL-002 驗證實測水溫 **$13.08^\circ\text{C}$**，精確觸發 `FREEZING_ALERT` 防寒警報與溶氧 2.8 mg/L 缺氧警告。
 
 
 
@@ -1738,7 +1753,7 @@ python src/cli/commands_a21.py search "七股區" --db db/agro.db
 # 📘 3.8 A30 毛豬批發交易行情知識庫 (03_08_a30_livestock_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_08_a30_livestock_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_08_a30_livestock_db.md)
 * **實測對照整合**：[LOG_A30_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A30_TEST.log) (4/4 PASS)
 
@@ -1811,7 +1826,7 @@ FROM a30_pork_trans_daily;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A30 特化了 **無槓民國年 (ROC Date) 轉 ISO 8601 標準日期算式**：
 
@@ -1856,7 +1871,7 @@ python src/cli/commands_a30.py search "花蓮縣" --db db/agro.db
 * **物理入庫筆數**：**5 筆** 毛豬拍賣行情紀錄
 * **單元測試報告**：[test_a30_livestock_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a30_livestock_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A30_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A30_TEST.log)
-* **母大腦鏈結斷言**：VAL-A00-011 驗證花蓮縣市場 291 頭、均價 105.19 元/kg，ISO 日期 2026-08-19。
+* **母大腦鏈結驗證斷言/Assert**：VAL-A00-011 驗證花蓮縣市場 291 頭、均價 105.19 元/kg，ISO 日期 2026-08-19。
 
 
 
@@ -1866,7 +1881,7 @@ python src/cli/commands_a30.py search "花蓮縣" --db db/agro.db
 # 📘 3.9 A31 動物用藥與畜產品殘留管制知識庫 (03_09_a31_vet_drug_food_residue_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_09_a31_vet_drug_food_residue_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_09_a31_vet_drug_food_residue_db.md)
 * **實測對照整合**：[LOG_A31_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A31_TEST.log) (4/4 PASS)
 
@@ -1939,7 +1954,7 @@ FROM a31_vet_drug_residue;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A31 特化了 **動物用藥禁藥零容忍分級算式**：
 
@@ -1981,7 +1996,7 @@ python src/cli/commands_a31.py search "氯黴素" --db db/agro.db
 * **物理入庫筆數**：**5 筆** 動物用藥殘留紀錄
 * **單元測試報告**：[test_a31_vet_drug_food_residue_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a31_vet_drug_food_residue_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A31_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A31_TEST.log)
-* **母大腦鏈結斷言**：VAL-A00-022 實測毛豬食安網碰撞 6 筆，精確截獲氯黴素 (MRL 0.0ppm) 標註 `PROHIBITED` 禁藥警告。
+* **母大腦鏈結驗證斷言/Assert**：VAL-A00-022 實測毛豬食安網碰撞 6 筆，精確截獲氯黴素 (MRL 0.0ppm) 標註 `PROHIBITED` 禁藥警告。
 
 
 
@@ -1991,7 +2006,7 @@ python src/cli/commands_a31.py search "氯黴素" --db db/agro.db
 # 📘 3.10 A40 農業氣象站歷史觀測知識庫 (03_10_a40_agro_climate_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_10_a40_agro_climate_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_10_a40_agro_climate_db.md)
 * **實測對照整合**：[LOG_A40_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A40_TEST.log) (4/4 PASS)
 
@@ -2062,7 +2077,7 @@ FROM a40_agro_climate_stations;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A40 特化了 **微氣候長週期溫濕度序列模型**：
 
@@ -2104,7 +2119,7 @@ python src/cli/commands_a40.py search "100213" --db db/agro.db
 * **物理入庫筆數**：**2,527 點** 觀測歷史紀錄
 * **單元測試報告**：[test_a40_agro_climate_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a40_agro_climate_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A40_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A40_TEST.log)
-* **母大腦鏈結斷言**：VAL-A00-014/015 實測測站 100213 觀測點數 96 點與跨 Pillar 氣候對照整合。
+* **母大腦鏈結驗證斷言/Assert**：VAL-A00-014/015 實測測站 100213 觀測點數 96 點與跨 Pillar 氣候對照整合。
 
 
 
@@ -2114,7 +2129,7 @@ python src/cli/commands_a40.py search "100213" --db db/agro.db
 # 📘 3.11 A41 土壤與水質環境安全知識庫 (03_11_a41_soil_water_pollution_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_11_a41_soil_water_pollution_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_11_a41_soil_water_pollution_db.md)
 * **實測對照整合**：[LOG_A41_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A41_TEST.log) (4/4 PASS)
 
@@ -2189,9 +2204,9 @@ FROM a41_soil_water_pollution;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
-A41 特化了 **重金屬污染比率 ($PollutionRatio$) 演演演算法**：
+A41 特化了 **重金屬污染比率 ($PollutionRatio$) 演演演演算法**：
 
 $$PollutionRatio = \frac{\text{實測濃度 (concentration\_ppm)}}{\text{管制標準 (regulatory\_limit\_ppm)}}$$
 
@@ -2233,7 +2248,7 @@ python src/cli/commands_a41.py search "北投區" --db db/agro.db
 * **物理入庫筆數**：**5 筆** 土壤監測據點紀錄
 * **單元測試報告**：[test_a41_soil_water_pollution_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a41_soil_water_pollution_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A41_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A41_TEST.log)
-* **母大腦鏈結斷言**：VAL-A00-020 實測臺北市北投區據點重金屬鎘 $Ratio = 1.0$，自動觸發 `HIGH_RISK` 環境安全警告。
+* **母大腦鏈結驗證斷言/Assert**：VAL-A00-020 實測臺北市北投區據點重金屬鎘 $Ratio = 1.0$，自動觸發 `HIGH_RISK` 環境安全警告。
 
 
 
@@ -2243,7 +2258,7 @@ python src/cli/commands_a41.py search "北投區" --db db/agro.db
 # 📘 3.50 A50 FAO AGROVOC 國際農學詞庫知識庫 (03_50_a50_fao_agrovoc_db.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_50_a50_fao_agrovoc_db.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_50_a50_fao_agrovoc_db.md)
 * **實測對照整合**：[LOG_A50_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A50_TEST.log) (4/4 PASS)
 
@@ -2325,7 +2340,7 @@ FROM a50_agrovoc_concepts;
 
 ---
 
-## 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+## 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 
 A50 特化了 **LOD SKOS 概念語意相似度對照整合模型**：
 
@@ -2369,7 +2384,7 @@ python src/cli/commands_a50.py search "coconut" --db db/agro.db
 * **物理入庫筆數**：**40,097 筆** 核心概念，**82,954 筆** 多語標籤
 * **單元測試報告**：[test_a50_fao_agrovoc_db.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a50_fao_agrovoc_db.py) (🟢 **4/4 PASS**)
 * **安靜日誌路徑**：[LOG_A50_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_A50_TEST.log)
-* **母大腦鏈結斷言**：VAL-A00-018/019 實測 139 筆在地實體語意碰撞，精確將台灣在地「椰子」以 $Score = 1.0$ 對照整合至聯合國 FAO `c_1784`。
+* **母大腦鏈結驗證斷言/Assert**：VAL-A00-018/019 實測 139 筆在地實體語意碰撞，精確將台灣在地「椰子」以 $Score = 1.0$ 對照整合至聯合國 FAO `c_1784`。
 
 
 
@@ -2379,7 +2394,7 @@ python src/cli/commands_a50.py search "coconut" --db db/agro.db
 # 📘 第 4 章：4 大領域利害關係人實戰劇本 Playbook (04_stakeholder_playbooks.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/04_stakeholder_playbooks.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/04_stakeholder_playbooks.md)
 * **對照整合測試網**：[SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md)
 
@@ -2392,7 +2407,7 @@ python src/cli/commands_a50.py search "coconut" --db db/agro.db
 ```mermaid
 flowchart LR
     Step1["1. 領域現實痛點<br/>(Pain Points)"]
-    Step2["2. 資料流轉路徑<br/>(Data Flow Path)"]
+    Step2["2. 資料流動轉化路徑<br/>(Data Flow Path)"]
     Step3["3. CLI 串接指令集<br/>(CLI Commands Chaining)"]
     Step4["4. 資料結果與決策解讀<br/>(Decision Interpretation)"]
     Step5["5. 風險防護與最佳實踐<br/>(Risk Prevention)"]
@@ -2408,7 +2423,7 @@ flowchart LR
 ### 1. 領域現實痛點
 第一線有機農民擬栽種「椰子」，面臨兩大抉擇：一是不知哪裡可以買到農業部審定合格之有機資材（防止誤用違規肥料導致有機驗證遭撤銷）；二是不知當前市場價格波動是否劇烈，擔心天災搶種導致收益崩盤。
 
-### 2. 資料流轉路徑
+### 2. 資料流動轉化路徑
 `A10 (農糧行情)` ➔ `A14 (有機肥料登記證)` ➔ `A13 (有機農場驗證名冊)` ➔ `A11 (農藥許可證 PHI)`
 
 ### 3. CLI 命令行串接指令集
@@ -2440,7 +2455,7 @@ tw-agro-cli search "椰子" --db db/agro.db
 ### 1. 領域現實痛點
 團膳業者與食安稽查員在採購「批發市場肉品」與「學校午餐食材」時，極易因事後抽驗延遲（數月後才出報告），導致違規含有禁藥（如氯黴素）或農藥殘留超標的食材被學生與消費者吃下肚。
 
-### 2. 資料流轉路徑
+### 2. 資料流動轉化路徑
 `A30 (毛豬拍賣)` + `A31 (動物用藥)` ➔ `a00_livestock_pork_safety_mesh` ➔ `A12 (農檢 MRL 預警)`
 
 ### 3. CLI 命令行串接指令集
@@ -2472,7 +2487,7 @@ tw-agro-cli doctor --db db/agro.db
 ### 1. 領域現實痛點
 開發農業諮詢 Chatbot 或 Agent 時，LLM 經常因缺乏結構化 Domain Grounding 而產生嚴重的「農業知識幻覺」（如胡亂建議農藥品項或錯估採收期）。
 
-### 2. 資料流轉路徑
+### 2. 資料流動轉化路徑
 `a00_graph_triples` (346 筆 SQLite-RDF) ➔ `fts_agro_global` (18,725 筆倒排) ➔ LLM Agent Tool-Calling
 
 ### 3. CLI 命令行串接指令集
@@ -2503,7 +2518,7 @@ tw-agro-cli search "椰子" --json --db db/agro.db
 ### 1. 領域現實痛點
 農業經濟學家與氣候變遷研究員在評估「極端氣候與農地重金屬對區域農業的影響」時，過往因資料散落於氣象署、環境部與農糧署，難以進行跨域面板資料 (Panel Data) 回歸分析。
 
-### 2. 資料流轉路徑
+### 2. 資料流動轉化路徑
 `A41 (土壤水質重金屬)` ➔ `A40 (農業氣象)` ➔ `A50 (FAO AGROVOC LOD)` ➔ `A10 (農糧行情)`
 
 ### 3. CLI 命令行串接指令集
@@ -2566,6 +2581,21 @@ triples = hub.get_graph_triples(entity_name="椰子")
 - `SchemaValidationError`：`attributes_json` 不符合 JSON Schema 規範。
 - `EntityNotFoundException`：檢索實體不存在時回傳空列表，不崩潰。
 
+### 5. 跨部會 GOV-300 母大腦整合 SDK (DomainRegistryResolver)
+當需要與母大腦 `tw-gov-db (GOV-300)` 進行跨部會協同連線時，可直接呼叫共享對接套件：
+
+```python
+from synergies.test_gov_a19_synergy import DomainRegistryResolver
+
+resolver = DomainRegistryResolver()
+# 1. 取得跨專案連線
+conn = resolver.get_domain_core_db_connection("GOV-300", "universal_keys.sqlite")
+
+# 2. 發動跨部會 CLI 命令
+cli_out = resolver.run_domain_cli("GOV-300", "zipcode", ["臺北市中正區"])
+print(cli_out)
+```
+
 
 
 ---
@@ -2574,7 +2604,7 @@ triples = hub.get_graph_triples(entity_name="椰子")
 # 📘 第 5 章：系統工程驗證、單元測試網與 QGIS 軟體定義地圖 (05_system_engineering_and_sdm.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/05_system_engineering_and_sdm.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/05_system_engineering_and_sdm.md)
 * **對照整合審計總表**：[SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md)
 * **全網測試日誌**：[LOG_FULL_SUITE_AUDIT.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_FULL_SUITE_AUDIT.log) (63/63 PASS)
@@ -2597,7 +2627,7 @@ flowchart TD
     Spec -->|功能設計 E1~E17| Impl
     Impl -->|實作 12 DB & A00| Test
     Test -->|安靜日誌落庫| Audit
-    Audit -->|雙向追溯斷言| Spec
+    Audit -->|雙向追溯驗證斷言/Assert| Spec
 ```
 *Fig 5.1: 系統工程 100% 雙向追溯與審計架構圖*
 
@@ -2684,7 +2714,7 @@ just agro-audit-syseng
 # 📘 第 6 章：結語與專案總結 (06_conclusion.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/06_conclusion.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/06_conclusion.md)
 * **專書對照整合**：[00_toc.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/00_toc.md)
 
@@ -2794,6 +2824,9 @@ tw-agro-cli search <KEYWORD> [--json] [--db PATH]
 
 # 3. 全庫 5 大 Safety Mesh 食安、寒害與重金屬診斷
 tw-agro-cli doctor [--db PATH]
+
+# 4. 跨部會 GOV-300 母大腦 (tw-gov-db) 4 階對照整合測試套件
+python synergies/test_gov_a19_synergy.py
 ```
 
 ---

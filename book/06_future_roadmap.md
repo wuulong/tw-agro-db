@@ -1,7 +1,7 @@
 # 📘 第 6 章：未來展望、國際 LOD 對照整合與台灣數位農業藍圖 (06_future_roadmap.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/06_future_roadmap.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/06_future_roadmap.md)
 * **專書完工對照整合**：[00_toc.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/00_toc.md)
 

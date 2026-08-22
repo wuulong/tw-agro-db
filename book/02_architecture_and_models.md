@@ -1,7 +1,7 @@
 # 📘 第 2 章：A00 母大腦全景架構與知識體系掌握導航 (02_architecture_and_models.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/02_architecture_and_models.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/02_architecture_and_models.md)
 * **對照整合測試**：[test_a00_master_hub.py](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/tests/test_a00_master_hub.py) (24/24 PASS)
 
@@ -100,7 +100,7 @@ flowchart TD
 
 ---
 
-## 🛡️ 2.4 A00 5 大事前融合食安與環境網演演演算法 (Pre-computed Safety Meshes)
+## 🛡️ 2.4 A00 5 大事前融合食安與環境網演演演演算法 (Pre-computed Safety Meshes)
 
 母大腦 A00 不僅僅是檢索介面，更是 **「跨領域事前融合計算引擎」**。透過在背景自動執行 5 大 Safety Mesh，將零散資料融合成具備實戰價值的食安與環境防護網：
 
@@ -139,7 +139,7 @@ flowchart LR
     Pork & Vet --> E4 --> M4
     Crop & Fert --> E5 --> M5
 ```
-*Fig 2.3: A00 5 大事前融合食安與環境網演演演算法串接圖*
+*Fig 2.3: A00 5 大事前融合食安與環境網演演演演算法串接圖*
 
 ### 5 大 Safety Mesh 實測量化資料：
 1. **農藥採收期預警網 (`a00_crop_pesticide_safety_mesh`)**：預先計算 `HIGH_RISK`（如採收期 $\ge 7$ 天）與用藥倍數。

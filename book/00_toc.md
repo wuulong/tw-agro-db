@@ -1,7 +1,7 @@
 # 📘 《台灣農漁畜開放資料全景圖鑑：從產地行情到食安防禦的資料體系》全書目錄 (00_toc.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔目錄**：[events-2026Q3/agro-db-in/tw-agro-db/book/00_toc.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/00_toc.md)
 
 ---
@@ -22,7 +22,7 @@
   - [2.6 農業氣象觀測與農地重金屬環境安全體系](02_06_agro_climate_environment_system.md)
   - [2.7 聯合國 FAO AGROVOC 國際農學多語體系](02_07_fao_agrovoc_lod_system.md)
   - [2.8 A00 母大腦：將農業知識凝練為 5 大事前融合防護網 (2.8.1 ~ 2.8.6)](02_08_a00_safety_meshes_and_graphrag.md) (`Fig 2.8`, `Fig 2.8.1`)
-  - [2.9 4 大真實農業情境之知識流轉與 DB 串接接力](02_09_scenarios_knowledge_navigation.md) (`Fig 2.9`)
+  - [2.9 4 大真實農業情境之知識流動轉化與 DB 串接接力](02_09_scenarios_knowledge_navigation.md) (`Fig 2.9`)
   - [2.10 摘要：如何透過 A00 完全掌握台灣農漁畜資料體系](02_10_summary_master_control.md)
 * **第 3 章：12 大農業知識資產與 DB 百科圖鑑 (通用 7 大維度獨立檔案)**
   - [3.0 全章子模組撰寫規範與通用 7 大維度架構說明](03_00_structure_guide.md) (`Fig 3.0`)

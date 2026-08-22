@@ -1,7 +1,7 @@
 {
   "module_id": "a14_organic_fertilizer_db",
   "name": "全台農糧資材與肥料登記證資料庫",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "data_source": {
     "agency": "農業部農糧署",
     "dataset_name": "全台農糧資材與肥料登記證資料庫",

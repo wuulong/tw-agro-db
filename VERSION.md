@@ -1,12 +1,20 @@
 # 🏷️ tw-agro-db (台灣農業開放大數據引擎) 版本演進與開發歷程看板 (VERSION.md)
 
-* **目前最新版本**：`v0.7.0`
+* **目前最新版本**：`v0.7.1`
 * **發布日期**：2026-08-20
 * **歸檔路徑**：[VERSION.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/VERSION.md)
 
 ---
 
 ## 📜 版本演進與 F-P-I-E-C 生命週期紀錄
+
+### 🚀 `v0.7.1` (2026-08-22) - GOV-A19 ↔ GOV-300 跨部會對接規格與測試驗證完工
+* **狀態**：🟢 `COMPLETED`
+* **重點變更**：
+  - 新增對接合約第 2.2 節 `G300-REQ-001 ~ 004` 剛性需求條款（發布者 OID 歸併、6 碼門牌區號 `630001` 反查、450 個氣象站空間對接與 `run_domain_cli` 調度）。
+  - 修復與擴充 [`synergies/test_gov_a19_synergy.py`](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/synergies/test_gov_a19_synergy.py) 對接測試套件，新增詳細 Log 機制並實測耗時 `8.38ms` (< 10ms 門檻) 100% 綠燈通過。
+  - 物理落庫測試日誌 [LOG_GOV_A19_SYNERGY_TEST.log](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/logs/LOG_GOV_A19_SYNERGY_TEST.log)。
+  - 建立相容性矩陣 (Compatibility Matrix)，標明對齊母專案 `tw-gov-db (GOV-300) v0.2.1`。
 
 ### 🏆 `v0.7.0` (2026-08-20) - A00 ↔ A10 ↔ A14 農糧資材雙輪食安網與 24 大測試網大里程碑完工
 * **狀態**：🟢 `COMPLETED`

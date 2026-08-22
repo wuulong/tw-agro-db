@@ -1,6 +1,6 @@
 {
   "project_name": "tw-agro-db",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "台灣農業開放大數據引擎 (Master Hub)",
   "active_modules": [
     "a10_tw_crop_db",

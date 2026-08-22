@@ -1,7 +1,7 @@
 {
   "module_id": "a31_vet_drug_food_residue_db",
   "name": "全台畜產品動物用藥殘留容許量標準資料庫",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "data_source": {
     "agency": "衛生福利部食品藥物管理署 (TFDA)",
     "dataset_name": "全台畜產品動物用藥殘留容許量標準資料庫",

@@ -1,7 +1,7 @@
 # 📘 3.0 全章子模組撰寫規範與通用 7 大維度架構說明 (03_00_structure_guide.md)
 
 * **專案名稱**：`tw-agro-db` (台灣農業開放大資料引擎)
-* **當前版本**：`v0.7.0`
+* **當前版本**：`v0.7.1`
 * **歸檔位置**：[events-2026Q3/agro-db-in/tw-agro-db/book/03_00_structure_guide.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/tw-agro-db/book/03_00_structure_guide.md)
 * **對照整合審計**：[SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md](file:///Users/wuulong/github/bmad-pa/events-2026Q3/agro-db-in/sys_eng/05_verification_testing/SYSTEM_ENGINEERING_ALIGNMENT_AUDIT.md)
 
@@ -19,7 +19,7 @@ flowchart TD
         D1["1. 領域寫作意圖與解決的農業問題"]
         D2["2. 原始開放資料源與政府權責機構"]
         D3["3. SQLite 資料庫 Schema 與資料模型"]
-        D4["4. 領域特化演演演算法與資料指標"]
+        D4["4. 領域特化演演演演算法與資料指標"]
         D5["5. 跨模組對接拓樸與資料流向 (含 Mermaid 拓樸圖)"]
         D6["6. CLI 指令與 Agent 工具呼叫"]
         D7["7. 實測物理資料與驗證紀錄"]
@@ -49,7 +49,7 @@ flowchart TD
 * **【必須包含 `attributes_json` Spec】**：詳細解構 `attributes_json` 的擴充 Key-Value 規格。
 * **【必須包含一筆真實範例資料】**：給出一筆完整的真實資料列 (Sample Row) 與 JSON Payload。
 
-### 4. 領域特化演演演算法與資料指標 (Domain Algorithms & Metrics)
+### 4. 領域特化演演演演算法與資料指標 (Domain Algorithms & Metrics)
 * 詳細解構該 DB 獨有的計算公式與品質標籤（如 A10 價格變異係數 $CV$、A14 NPK 養分總和算式、A21 水質 $15^\circ\text{C}$ 寒害 Scorer、A30 無槓民國年 ISO 轉碼、A41 重金屬 $PollutionRatio$ 等）。
 
 ### 5. 跨模組對接拓樸與資料流向 (Cross-Module Topology)
